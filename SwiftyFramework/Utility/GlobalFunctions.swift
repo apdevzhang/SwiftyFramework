@@ -1,3 +1,11 @@
+//
+//  GlobalFunctions.swift
+//  SwiftyFramework
+//
+//  Created by BANYAN on 2020/1/7.
+//  Copyright © 2020 BANYAN. All rights reserved.
+//
+
 import UIKit
 import Toast_Swift
 import RxSwift
@@ -7,8 +15,8 @@ import Moya
 // MARK: - 全局通用提示样式
 func MakeToast(message: String) {
     var toastStyle = ToastStyle()
-    toastStyle.messageColor = .black
-    toastStyle.messageFont = UIFont.systemFont(ofSize: 18)
+    toastStyle.messageColor = .white
+    toastStyle.messageFont = .systemFont(ofSize: 16)
     UIApplication.shared.keyWindow?.makeToast(message, duration: 2, position: .center, style: toastStyle)
 }
 
