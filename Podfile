@@ -53,10 +53,6 @@ target 'SwiftyFramework' do
   pod 'SwifterSwift', '~> 5.0'               # https://github.com/SwifterSwift/SwifterSwift
   pod 'R.swift', '~> 5.0.0'                  # https://github.com/mac-cain13/R.swift
   
-  # Form
-  pod 'Eureka'                               # https://github.com/xmartlabs/Eureka
-  pod 'Validator'                            # https://github.com/adamwaite/Validator
-  
   # Not Classified
   pod 'DeviceKit', '~> 2.0'                  # https://github.com/devicekit/DeviceKit
   
