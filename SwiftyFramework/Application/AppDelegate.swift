@@ -21,9 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Application.default.configutation()
         
-        /// 测试
-        Application.default.clearDataPersistence()
-        
         return true
     }
     
