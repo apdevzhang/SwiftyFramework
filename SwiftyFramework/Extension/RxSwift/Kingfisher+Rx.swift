@@ -1,11 +1,10 @@
 //
 //  Kingfisher+Rx.swift
-//  SwiftHub
+//  Cellulant
 //
-//  Created by Khoren Markosyan on 6/30/18.
-//  Copyright © 2018 Khoren Markosyan. All rights reserved.
+//  Created by Olar's Mac on 1/21/20.
+//  Copyright © 2020 Adie Olalekan. All rights reserved.
 //
-
 import UIKit
 import RxCocoa
 import RxSwift
@@ -23,7 +22,35 @@ extension Reactive where Base: UIImageView {
                                   placeholder: placeholderImage,
                                   options: options,
                                   progressBlock: nil,
-                                  completionHandler: { (_, _, _, _) in })
+                                  completionHandler: { (result) in })
         })
+    }
+}
+
+extension ImageCache: ReactiveCompatible {}
+
+extension Reactive where Base: ImageCache {
+
+    func retrieveCacheSize() -> Observable<Int> {
+        return Single.create { single in
+            self.base.calculateDiskStorageSize { (result) in
+                do {
+                    single(.success(Int(try result.get())))
+                } catch {
+                    single(.error(error))
+                }
+            }
+            return Disposables.create { }
+        }.asObservable()
+    }
+
+    public func clearCache() -> Observable<Void> {
+        return Single.create { single in
+            self.base.clearMemoryCache()
+            self.base.clearDiskCache(completion: {
+                single(.success(()))
+            })
+            return Disposables.create { }
+        }.asObservable()
     }
 }

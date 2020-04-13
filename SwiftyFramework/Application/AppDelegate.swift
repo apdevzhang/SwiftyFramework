@@ -6,34 +6,23 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
-import IQKeyboardManagerSwift
-import Reachability
-import CocoaLumberjack
-import KafkaRefresh
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    var reachability: Reachability?
-    
+            
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
         self.window?.rootViewController = BaseNavigationController(rootViewController: ViewController())
         self.window?.makeKeyAndVisible()
-        
-        IQKeyboardManager.shared.enable = true
-        
-        KafkaRefreshDefaults.standard()?.headDefaultStyle = .replicatorCircle
-        
-        reachability = Reachability()
-        try? reachability?.startNotifier()
 
-        CocoaLumberjackManager.shared.configuration()
+        Application.default.configutation()
+        
+        /// 测试
+        Application.default.clearDataPersistence()
         
         return true
     }
@@ -56,6 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         
-    }    
+    }
+    
+    func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool {
+        if extensionPointIdentifier.rawValue == "com.apple.keyboard-service" {
+            return false
+        }
+        return true
+    }
 }
+
 

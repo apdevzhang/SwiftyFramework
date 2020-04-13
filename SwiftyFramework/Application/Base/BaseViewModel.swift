@@ -6,10 +6,8 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 import RxCocoa
-import ObjectMapper
 
 protocol ViewModelType {
     associatedtype Input
@@ -46,6 +44,7 @@ class BaseViewModel: NSObject {
     /// 用于判断是否到达最后一页
     let lastPageSubject = PublishSubject<Bool>()
     
+    // MARK: - Lifecycle
     deinit {
         DDLogInfo("\(self.className)已释放")
     }
@@ -59,9 +58,14 @@ class BaseViewModel: NSObject {
                 let errorResponse = error as? MoyaError
                 if let body = try errorResponse?.response?.mapJSON() as? [String: Any],
                     let errorResponse = Mapper<ErrorResponse>().map(JSON: body) {
-                    DDLogInfo("\(errorResponse)")
-                    if errorResponse.code != nil {
+                    DDLogError("\(errorResponse)")
+                    
+                    if let responseCode = errorResponse.code {
                         self.errorResponse.onNext(errorResponse)
+                        
+                        if responseCode == 401 {
+                            AuthManager.shared.removeToken()
+                        }
                     }
 
                     return APIError.serverError(response: errorResponse)
@@ -76,7 +80,6 @@ class BaseViewModel: NSObject {
         error.asDriver().drive(onNext: { [weak self] (error) in
             guard let self = self else { return }
             
-            // TODO: 需要将错误转换成中文
             DDLogError(" \(self.className) 服务器错误：\(error.localizedDescription)")
         }).disposed(by: rx.disposeBag)
     }

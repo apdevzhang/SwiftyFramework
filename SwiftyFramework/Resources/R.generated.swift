@@ -17,14 +17,46 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 5 files.
   struct file {
+    /// Resource file `Common.xcconfig`.
+    static let commonXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Common", pathExtension: "xcconfig")
+    /// Resource file `Debug.xcconfig`.
+    static let debugXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Debug", pathExtension: "xcconfig")
     /// Resource file `OFL.txt`.
     static let oflTxt = Rswift.FileResource(bundle: R.hostingBundle, name: "OFL", pathExtension: "txt")
+    /// Resource file `Product.xcconfig`.
+    static let productXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Product", pathExtension: "xcconfig")
+    /// Resource file `Release.xcconfig`.
+    static let releaseXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Release", pathExtension: "xcconfig")
+    
+    /// `bundle.url(forResource: "Common", withExtension: "xcconfig")`
+    static func commonXcconfig(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.commonXcconfig
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "Debug", withExtension: "xcconfig")`
+    static func debugXcconfig(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.debugXcconfig
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "OFL", withExtension: "txt")`
     static func oflTxt(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.oflTxt
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "Product", withExtension: "xcconfig")`
+    static func productXcconfig(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.productXcconfig
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "Release", withExtension: "xcconfig")`
+    static func releaseXcconfig(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.releaseXcconfig
       return fileResource.bundle.url(forResource: fileResource)
     }
     

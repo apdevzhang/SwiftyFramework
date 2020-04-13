@@ -1,0 +1,22 @@
+//
+//  Release.xcconfig
+//  SwiftyFramework
+//
+//  Created by BANYAN on 2020/3/19.
+//  Copyright © 2020 BANYAN. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BUNDLE_DISPLAY_NAME = SwiftyFramework(Release)
+
+
+
+
+/// Bundle Identifier
+BUNDLE_IDENTIFIER = com.Better.SwiftyFramework
+
+
+/// APP Icon
+APP_ICON = AppIconRelease

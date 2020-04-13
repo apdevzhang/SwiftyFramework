@@ -1,4 +1,5 @@
 //
+//  Networking.swift
 //  SwiftyFramework
 //
 //  Created by BANYAN on 2020/1/7.
@@ -6,7 +7,6 @@
 //
 // reference https://github.com/khoren93/SwiftHub
 
-import UIKit
 import Moya
 import RxSwift
 import Alamofire
@@ -30,27 +30,14 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
     }
     
     func request(_ token: Target) -> Observable<Moya.Response> {
-        let actualRequest = provider.rx.request(token)        
+        let actualRequest = provider.rx.request(token)
         return online
             .ignore(value: false)
             .take(1)
             .flatMap { _ in
                 return actualRequest
                     .filterSuccessfulStatusCodes()
-                    .do(onSuccess: { (response) in
-                    }, onError: { (error) in
-                        if let error = error as? MoyaError {
-                            switch error {
-                            case .statusCode(let response):
-                                if response.statusCode == 401 {
-                                    // 集中处理异常状态码
-                                    // AuthManager.removeToken()
-                                }
-                            default: break
-                            }
-                        }
-                    })
         }
-    }    
+    }
 }
 
