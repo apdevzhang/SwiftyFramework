@@ -17,15 +17,17 @@ target 'SwiftyFramework' do
   pod 'RxSwiftExt', '~> 5.0'                # https://github.com/RxSwiftCommunity/RxSwiftExt
   pod 'RxGesture', '~> 3.0'                 # https://github.com/RxSwiftCommunity/RxGesture
   pod 'RxAlertController', '~> 5.0'         # https://github.com/evgeny-sureev/RxAlertController
-  pod 'RxWebKit', '~> 1.0'                  # https://github.com/RxSwiftCommunity/RxWebKit  
+  pod 'RxWebKit', '~> 1.0'                  # https://github.com/RxSwiftCommunity/RxWebKit
   # RxAppState包含'RxViewController'
   pod "RxAppState", '~> 1.6.0'              # https://github.com/pixeldock/RxAppState
+  # pod 'SkeletonView'                        # https://github.com/Juanpe/SkeletonView
+  pod 'RxSkeleton', '~>0.0.9'               # https://github.com/any-optional/RxSkeleton
   
   
   # Networking
   pod 'Alamofire', '~> 5.0.0-rc.2'        # https://github.com/Alamofire/Alamofire
   pod 'Moya/RxSwift', '14.0.0-beta.2'      # https://github.com/Moya/Moya
-  pod 'MoyaSugar/RxSwift'                  # https://github.com/devxoul/MoyaSugar  
+  pod 'MoyaSugar/RxSwift'                  # https://github.com/devxoul/MoyaSugar
   #  RxReachability包含 ReachabilitySwift # https://github.com/ashleymills/Reachability.swift
   pod 'RxReachability'      # https://github.com/RxSwiftCommunity/RxReachability
   
@@ -45,7 +47,6 @@ target 'SwiftyFramework' do
   pod 'Toast-Swift'                          # https://github.com/scalessec/Toast-Swift
   pod 'WhatsNewKit', '~> 1.0'                # https://github.com/SvenTiigi/WhatsNewKit
   pod 'Hero', '~> 1.4.0'                     # https://github.com/lkzhao/Hero
-  pod 'SkeletonView'                         # https://github.com/Juanpe/SkeletonView
   pod 'FSPagerView', '~> 0.8.3'              # https://github.com/WenchaoD/FSPagerView
   
   # Code Quality
@@ -55,6 +56,7 @@ target 'SwiftyFramework' do
   
   # Not Classified
   pod 'DeviceKit', '~> 2.0'                  # https://github.com/devicekit/DeviceKit
+  pod 'CryptoSwift', '~> 1.0'  #https://github.com/krzyzanowskim/CryptoSwift
   
 end
 

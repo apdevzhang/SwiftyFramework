@@ -13,10 +13,10 @@ class CocoaLumberjackManager: NSObject {
     func configuration() {
         dynamicLogLevel = .all
         
-        DDTTYLogger.sharedInstance.logFormatter = CocoaLumberjackLogFormatter()
+        DDTTYLogger.sharedInstance!.logFormatter = CocoaLumberjackLogFormatter()
         
         /// TTY = `Xcode console`
-        DDLog.add(DDTTYLogger.sharedInstance)
+        DDLog.add(DDTTYLogger.sharedInstance!)
         
         /// ASL =` Apple System Logs`
 //        DDLog.add(DDOSLogger.sharedInstance)
