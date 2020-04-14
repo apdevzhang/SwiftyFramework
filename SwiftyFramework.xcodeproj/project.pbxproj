@@ -143,10 +143,9 @@
 		23BCCA7D2420A0F100F9EC79 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		23BCCA802420A17800F9EC79 /* CommonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
-		23C558E7244560EA00D5FB01 /* SwiftyFramework.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = SwiftyFramework.app; path = "../../../Library/Developer/Xcode/DerivedData/SwiftyFramework-cutwamohbxhcxabltyiafclhtsuq/Build/Products/Debug-iphonesimulator/SwiftyFramework.app"; sourceTree = "<group>"; };
-		23C558E82445621400D5FB01 /* SwiftyFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23C558E92445621400D5FB01 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23C558EA2445621400D5FB01 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23C558E82445621400D5FB01 /* SwiftyFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftyFramework.app; path = "/Users/BANYAN/GitHub/SwiftyFramework/build/Debug-iphoneos/SwiftyFramework.app"; sourceTree = "<absolute>"; };
+		23C558E92445621400D5FB01 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftyFrameworkTests.xctest; path = "/Users/BANYAN/GitHub/SwiftyFramework/build/Debug-iphoneos/SwiftyFrameworkTests.xctest"; sourceTree = "<absolute>"; };
+		23C558EA2445621400D5FB01 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftyFrameworkUITests.xctest; path = "/Users/BANYAN/GitHub/SwiftyFramework/build/Debug-iphoneos/SwiftyFrameworkUITests.xctest"; sourceTree = "<absolute>"; };
 		3EB449CDDBCFEF6D263B9111 /* Pods-SwiftyFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFrameworkTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyFrameworkTests/Pods-SwiftyFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D37E902348C94A04E16F2AF /* Pods-SwiftyFramework.product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFramework.product.xcconfig"; path = "Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.product.xcconfig"; sourceTree = "<group>"; };
 		6D4B3497A1A6022A7A670977 /* Pods-SwiftyFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFramework.release.xcconfig"; path = "Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,9 +198,6 @@
 				23BCC9E424205F9A00F9EC79 /* SwiftyFrameworkTests */,
 				BF3B022592A3FF14057FA10F /* Pods */,
 				633A13E5E3CDA3B949EB77BF /* Frameworks */,
-				23C558E82445621400D5FB01 /* SwiftyFramework.app */,
-				23C558E92445621400D5FB01 /* SwiftyFrameworkTests.xctest */,
-				23C558EA2445621400D5FB01 /* SwiftyFrameworkUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,7 +217,6 @@
 		23BCC9E424205F9A00F9EC79 /* SwiftyFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				23C558E7244560EA00D5FB01 /* SwiftyFramework.app */,
 				23BCC9E524205F9A00F9EC79 /* SwiftyFrameworkTests.swift */,
 				23BCC9E724205F9A00F9EC79 /* Info.plist */,
 			);

@@ -20,8 +20,6 @@ target 'SwiftyFramework' do
   pod 'RxWebKit', '~> 1.0'                  # https://github.com/RxSwiftCommunity/RxWebKit
   # RxAppState包含'RxViewController'
   pod "RxAppState", '~> 1.6.0'              # https://github.com/pixeldock/RxAppState
-  # pod 'SkeletonView'                        # https://github.com/Juanpe/SkeletonView
-  pod 'RxSkeleton', '~>0.0.9'               # https://github.com/any-optional/RxSkeleton
   
   
   # Networking
@@ -56,7 +54,6 @@ target 'SwiftyFramework' do
   
   # Not Classified
   pod 'DeviceKit', '~> 2.0'                  # https://github.com/devicekit/DeviceKit
-  pod 'CryptoSwift', '~> 1.0'  #https://github.com/krzyzanowskim/CryptoSwift
   
 end
 
