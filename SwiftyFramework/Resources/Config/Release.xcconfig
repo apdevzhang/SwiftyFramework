@@ -9,10 +9,11 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
+
+#include "Common.xcconfig"
+#include "Pods/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.Release.xcconfig"
+
 BUNDLE_DISPLAY_NAME = SwiftyFramework(Release)
-
-
-
 
 /// Bundle Identifier
 BUNDLE_IDENTIFIER = com.Better.SwiftyFramework
