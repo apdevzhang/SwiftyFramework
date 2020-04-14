@@ -11,7 +11,7 @@
 
 
 #include "Common.xcconfig"
-#include "Pods/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.Release.xcconfig"
+#include "Pods/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.release.xcconfig"
 
 BUNDLE_DISPLAY_NAME = SwiftyFramework(Release)
 
