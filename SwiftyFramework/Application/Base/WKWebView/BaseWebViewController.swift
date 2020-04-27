@@ -23,7 +23,7 @@ class BaseWebViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wkWebView.customUserAgent = ""
+        wkWebView.customUserAgent = UserAgent.shared.userAgentString()
         
         initUI()
         
