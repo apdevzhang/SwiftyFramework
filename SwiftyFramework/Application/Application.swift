@@ -82,9 +82,8 @@ extension Application {
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
 
         let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        
-        if FileManager.default.fileExists(atPath: filePath.absoluteString) {
-            try! FileManager.default.removeItem(atPath: filePath.absoluteString)
+        if FileManager.default.fileExists(atPath: filePath.path) {
+            try! FileManager.default.removeItem(atPath: filePath.path)
         }
     }
 }
