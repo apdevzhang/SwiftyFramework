@@ -12,8 +12,8 @@ struct OpenSDKConst {
     
     // MARK: - 微信
     struct WeChat {
-        static let id: String = ""
-        static let secret: String = ""
+        static let appID: String = ""
+        static let appKey: String = ""
     }
     
     // MARK: - 腾讯

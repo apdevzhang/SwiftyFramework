@@ -6,10 +6,10 @@
 //  Copyright © 2019 Apus. All rights reserved.
 //
 
-import UIKit
 import Moya
 
 struct BaseAPI {
+    
     static var baseURL: URL {
         #if DEBUG
             return URL(string: "")!
@@ -20,10 +20,11 @@ struct BaseAPI {
     
     static var headers: [String: String]? {
         var headers = Dictionary<String, String>()
-//        headers["Content-Type"] = "application/json"
-//        headers["app_version"] = "1.6.4"
-//        headers["Authorization"] = UserDefaultConfig.token
+        headers["Content-Type"] = "application/json"
+        headers["app-version"] = RxAppState.currentAppVersion
+//        headers["access-token"] = UserDataManager.shared.user.accessToken
         return headers
     }
+    
 }
 

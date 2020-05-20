@@ -1,18 +1,16 @@
 //
-//  BaseCollectionViewCell.swift
-//  GiTiny
+//  BaseCollectionReusableView.swift
+//  Apollo
 //
-//  Created by DongHeeKang on 22/02/2019.
-//  Copyright © 2019 k-lpmg. All rights reserved.
+//  Created by BANYAN on 2020/5/15.
+//  Copyright © 2020 Apollo. All rights reserved.
 //
 
-import RxSwift
-
-class BaseCollectionViewCell: UICollectionViewCell {
+class BaseCollectionReusableView: UICollectionReusableView {
     
     // MARK: - Properties
     
-    var cellDisposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
     
     // MARK: - Lifecycle
@@ -20,7 +18,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        cellDisposeBag = DisposeBag()
+        disposeBag = DisposeBag()
     }
     
     override init(frame: CGRect) {
@@ -28,6 +26,10 @@ class BaseCollectionViewCell: UICollectionViewCell {
         
         makeUI()
         makeConstraints()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
     required init?(coder aDecoder: NSCoder) {

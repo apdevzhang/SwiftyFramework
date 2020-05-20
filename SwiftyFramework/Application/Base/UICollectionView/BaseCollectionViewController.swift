@@ -6,18 +6,17 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
-
 class BaseCollectionViewController: BaseViewController {
     
     // MARK: - Properties
     
     
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initUI()
+        makeUI()
         
         bindRefresh()
         
@@ -28,8 +27,10 @@ class BaseCollectionViewController: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     // MARK: - UI
-    func initUI() {
+    
+    func makeUI() {
         view.addSubview(collectionView)
         
         collectionView.snp.makeConstraints { (x) in
@@ -37,13 +38,9 @@ class BaseCollectionViewController: BaseViewController {
         }
     }
     
-    // MARK: - Event
-    
-    
-    // MARK: - Notification
-    
     
     // MARK: - Public Methods
+    
     func bindViewModel() {
         // emptyDataSet
         let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
@@ -81,6 +78,7 @@ class BaseCollectionViewController: BaseViewController {
     
     
     // MARK: - Private Methods
+    
     private func bindRefresh() {
         collectionView.bindGlobalStyle(forHeadRefreshHandler: { [weak self] in
             self?.headerRefreshTrigger.onNext(())
@@ -97,18 +95,13 @@ class BaseCollectionViewController: BaseViewController {
     }
     
     
-    // MARK: - Delegate
+    // MARK: - Getter
     
-    
-    // MARK: - Setter
-    
-    
-    // MARK: - Getter    
     lazy var collectionView: UICollectionView = {
         let x = UICollectionView(frame: self.view.bounds, collectionViewLayout: flowLayout)
         x.backgroundColor = .white
         x.alwaysBounceVertical = true
-        x.alwaysBounceHorizontal = true
+//        x.alwaysBounceHorizontal = true
         x.emptyDataSetSource = self
         x.emptyDataSetDelegate = self
         

@@ -6,7 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 import RxCocoa
 import RxWebKit
@@ -15,17 +14,20 @@ import WebKit
 class BaseWebViewController: BaseViewController {
     
     // MARK: - Properties
+    
     let wkWebView = WKWebView()
     
     let url = BehaviorRelay<URL?>(value: nil)
     
+    
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         wkWebView.customUserAgent = UserAgent.shared.userAgentString()
         
-        initUI()
+        makeUI()
         
         webViewConfiguration()
     }
@@ -34,29 +36,28 @@ class BaseWebViewController: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     // MARK: - UI
-    func initUI() {
+    
+    func makeUI() {
         self.view.addSubview(wkWebView)
         
         wkWebView.snp.makeConstraints { (x) in
             x.edges.equalToSuperview()
         }
     }
-    
-    // MARK: - Event
-    
-    
-    // MARK: - Notification
-    
+
     
     // MARK: - Public Methods
+    
     // 加载进度管理（可根据项目需要设置加载动画）
     func webViewLoading(_ progress: Double) {
         DDLogInfo("webView加载进度：\(progress)%")
     }
     
     // MARK: - Private Methods
-    func webViewConfiguration() {
+    
+    private func webViewConfiguration() {
         // 加载URL
         url.subscribe(onNext: { [weak self] (url) in
             if let url = url {
@@ -104,14 +105,6 @@ class BaseWebViewController: BaseViewController {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = loading
             }).disposed(by: rx.disposeBag)
     }
-    
-    // MARK: - Delegate
-    
-    
-    // MARK: - Setter
-    
-    
-    // MARK: - Getter
     
 }
 

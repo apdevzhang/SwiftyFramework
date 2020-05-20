@@ -5,7 +5,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import Moya
 
 public let networkActivityPlugin = NetworkActivityPlugin { (change,_)  -> () in

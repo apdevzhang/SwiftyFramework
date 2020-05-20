@@ -16,9 +16,12 @@ class Application: NSObject {
     static let `default` = Application()
     
     // MARK: - Properties
+    
     var reachability: Reachability?
     
+    
     // MARK: - Public Methods
+    
     func configutation() {
         reachability = Reachability()
         try? reachability?.startNotifier()
@@ -29,7 +32,7 @@ class Application: NSObject {
         
         setupCocoaLumberjack()
         
-        setupKingfisher()        
+        setupKingfisher()
     }
     
     // MARK: - Private Methods
@@ -37,14 +40,15 @@ class Application: NSObject {
     /// 配置`KafkaRefresh `
     private func setupKafkaRefresh() {
         if let defaults = KafkaRefreshDefaults.standard() {
-            defaults.headDefaultStyle = .replicatorAllen
-            defaults.footDefaultStyle = .replicatorDot
+            defaults.headDefaultStyle = .native
+            defaults.footDefaultStyle = .native
         }
     }
     
     /// 配置键盘
     private func setupKeyboardManager() {
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "完成"
     }
     
     /// 配置日志插件

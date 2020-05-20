@@ -1,33 +1,34 @@
 //
-//  BaseCollectionViewCell.swift
-//  GiTiny
+//  BaseTableViewHeaderFooterView.swift
+//  Apollo
 //
-//  Created by DongHeeKang on 22/02/2019.
-//  Copyright © 2019 k-lpmg. All rights reserved.
+//  Created by BANYAN on 2020/5/12.
+//  Copyright © 2020 Apollo. All rights reserved.
 //
 
-import RxSwift
+class BaseTableViewHeaderFooterView: UITableViewHeaderFooterView {
 
-class BaseCollectionViewCell: UICollectionViewCell {
+     // MARK: - Properties
     
-    // MARK: - Properties
-    
-    var cellDisposeBag = DisposeBag()
-    
+     var disposeBag = DisposeBag()
     
     // MARK: - Lifecycle
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        cellDisposeBag = DisposeBag()
+        disposeBag = DisposeBag()
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
         
         makeUI()
         makeConstraints()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
     required init?(coder aDecoder: NSCoder) {

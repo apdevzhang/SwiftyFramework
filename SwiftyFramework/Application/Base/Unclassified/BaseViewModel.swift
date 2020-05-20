@@ -39,12 +39,14 @@ class BaseViewModel: NSObject {
     var totalPage = 1
     
     /// 单次分页条数
-    var pageSize = 100
+    var pageSize = 5
         
     /// 用于判断是否到达最后一页
     let lastPageSubject = PublishSubject<Bool>()
     
+    
     // MARK: - Lifecycle
+    
     deinit {
         DDLogInfo("\(self.className)已释放")
     }
@@ -63,8 +65,9 @@ class BaseViewModel: NSObject {
                     if let responseCode = errorResponse.code {
                         self.errorResponse.onNext(errorResponse)
                         
-                        if responseCode == 401 {
-                            AuthManager.shared.removeToken()
+                        //  token失效
+                        if responseCode == 9001 {
+
                         }
                     }
 

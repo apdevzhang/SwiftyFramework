@@ -11,10 +11,6 @@ import MoyaSugar
 
 enum CommonAPI {
     case message(parameters: Dictionary<String, Any>)
-    
-    case banner(parameters: Dictionary<String, Any>)
-    
-    case announcement(parameters: Dictionary<String, Any>)
 }
 
 extension CommonAPI: SugarTargetType {
@@ -22,22 +18,14 @@ extension CommonAPI: SugarTargetType {
     var route: Route {
         switch self {
         case .message:
-            return .post("/appApi/appNotify/notifyList")
-        case .banner:
-            return .post("/appApi/bannerApp/list")
-        case .announcement:
-            return .post("/appApi/appPolicy/list")
+            return .get("")
         }
     }
     
     var parameters: Parameters? {
         switch self {
         case .message(let parameters):
-            return JSONEncoding() => parameters
-        case .banner(let parameters):
-            return JSONEncoding() => parameters
-        case .announcement(let parameters):
-            return JSONEncoding() => parameters
+            return URLEncoding() => parameters
         }
     }
     

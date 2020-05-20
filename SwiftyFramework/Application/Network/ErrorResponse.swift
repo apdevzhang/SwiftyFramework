@@ -5,7 +5,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import ObjectMapper
 
 // 服务端返回错误信息

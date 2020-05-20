@@ -6,14 +6,12 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import DZNEmptyDataSet
-
 
 class BaseViewController: UIViewController {
     
     // MARK: - Properties
-    
+        
     /// 导航栏标题
     var navigationTitle = "" {
         didSet {
@@ -45,6 +43,7 @@ class BaseViewController: UIViewController {
     
     
     // MARK: - Lifecycle
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
         DDLogInfo("退出页面：\(self.className)")
@@ -61,13 +60,9 @@ class BaseViewController: UIViewController {
         
         DDLogInfo("进入页面: \(self.className)")
         
-        view.backgroundColor = .white
+//        view.backgroundColor = .xFEFFFF_00
         
         hero.isEnabled = true
-        
-        automaticallyAdjustsScrollViewInsets = false
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true;
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
                 
         networkListener()
     }
@@ -93,7 +88,8 @@ class BaseViewController: UIViewController {
     
     
     // MARK: - Public Methods
-    // MARK: 更新暗黑模式
+    
+    ///更新暗黑模式
     func updateColorAppearance() {
         if #available(iOS 13.0, *) {
             if let state = AppearanceState(rawValue: AppearanceDefault.appearanceState) {
@@ -114,8 +110,9 @@ class BaseViewController: UIViewController {
     
     
     // MARK: - Private Methods
+    
     // 网络状态监听
-    func networkListener() {
+    private func networkListener() {
         // 隐藏断网toast
         Reachability.rx.isConnected
             .subscribe(onNext: {
@@ -128,16 +125,8 @@ class BaseViewController: UIViewController {
                 DDLogInfo("Is disconnected")
             }).disposed(by: rx.disposeBag)
     }
-    
-
-    // MARK: - Delegate
-    
-    
-    // MARK: - Setter
-    
-    
-    // MARK: - Getter
 }
+
 
 extension BaseViewController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -188,3 +177,4 @@ extension BaseViewController: DZNEmptyDataSetDelegate {
         emptyDataSetViewTap.onNext(())
     }
 }
+

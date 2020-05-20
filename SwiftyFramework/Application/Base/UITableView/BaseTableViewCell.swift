@@ -6,16 +6,17 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 
 class BaseTableViewCell: UITableViewCell {
 
     // MARK: - Properties
+   
     var cellDisposeBag = DisposeBag()
     
     
     // MARK: - Lifecycle
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         
@@ -25,7 +26,7 @@ class BaseTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = .none
+        self.selectionStyle = .none        
         
         makeUI()
         makeConstraints()
@@ -43,4 +44,5 @@ class BaseTableViewCell: UITableViewCell {
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale
     }
+    
 }

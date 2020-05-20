@@ -5,7 +5,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 import Alamofire
 

@@ -1,13 +1,7 @@
-//
-//  ViewController.swift
-//  SwiftyFramework
-//
-//  Created by BANYAN on 2020/5/20.
-//  Copyright © 2020 BANYAN. All rights reserved.
-//
+//___FILEHEADER___
 
-class ViewController: UIViewController {
-    
+class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
+
     // MARK: - Properties
     
     
@@ -16,7 +10,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DDLogInfo("skoal~")
     }
 
     override func didReceiveMemoryWarning() {

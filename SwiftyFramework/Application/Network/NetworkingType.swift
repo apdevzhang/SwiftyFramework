@@ -17,7 +17,11 @@ extension NetworkingType {
         var plugins: [PluginType] = []
         
         plugins.append(networkActivityPlugin)
-        plugins.append(NetworkLoggerPlugin())
+        
+        var loggerConfig = NetworkLoggerPlugin.Configuration()
+        loggerConfig.logOptions = .verbose
+                        
+        plugins.append(NetworkLoggerPlugin(configuration: loggerConfig))
         
         return plugins
     }

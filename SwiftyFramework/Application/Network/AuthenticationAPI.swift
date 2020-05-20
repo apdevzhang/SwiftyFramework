@@ -16,7 +16,7 @@ enum AuthenticationAPI {
 
 extension AuthenticationAPI: SugarTargetType {
     
-    /// method + path
+    // method + path
     var route: Route {
         switch self {
         case .login:
@@ -26,7 +26,7 @@ extension AuthenticationAPI: SugarTargetType {
         }
     }
     
-    /// encoding + parameters
+    // encoding + parameters
     var parameters: Parameters? {
         switch self {
         case .login(let parameters):

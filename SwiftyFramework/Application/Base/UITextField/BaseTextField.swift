@@ -6,13 +6,10 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
-
 class BaseTextField: UITextField {
-
-    // MARK: - Properties
     
     // MARK: - Lifecycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -20,6 +17,10 @@ class BaseTextField: UITextField {
         if #available(iOS 12.0, *) {
             self.textContentType = .oneTimeCode
         }
+        self.autocapitalizationType = .none
+        
+        makeUI()
+        makeConstraints()
     }
     
     override func layoutSubviews() {
@@ -29,17 +30,8 @@ class BaseTextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
-    // MARK: - Public Methods
     
-    
-    // MARK: - Private Methods
-    
-    
-    // MARK: - Setter
-    
-    
-    // MARK: - Getter
-    
+    func makeUI() {}
+    func makeConstraints() {}
     
 }

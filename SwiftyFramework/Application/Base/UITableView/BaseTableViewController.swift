@@ -6,7 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import DZNEmptyDataSet
 import KafkaRefresh
 
@@ -14,11 +13,13 @@ class BaseTableViewController: BaseViewController {
     
     // MARK: - Properties
         
+    
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initUI()
+        makeUI()
         
         bindRefresh()
         
@@ -29,8 +30,10 @@ class BaseTableViewController: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     // MARK: - UI
-    func initUI() {
+    
+    func makeUI() {
         view.addSubview(tableView)
   
         tableView.snp.makeConstraints { (x) in
@@ -38,7 +41,9 @@ class BaseTableViewController: BaseViewController {
         }
     }
     
+    
     // MARK: - Public Methods
+    
     func bindViewModel() {
         // emptyDataSet
         let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
@@ -77,6 +82,7 @@ class BaseTableViewController: BaseViewController {
     
     
     // MARK: - Private Methods
+    
     private func bindRefresh() {
         tableView.bindGlobalStyle(forHeadRefreshHandler: { [weak self] in
             self?.headerRefreshTrigger.onNext(())
@@ -92,11 +98,9 @@ class BaseTableViewController: BaseViewController {
         tableView.footRefreshControl.autoRefreshOnFoot = true
     }
     
-    
-    // MARK: - Setter
-    
-    
+
     // MARK: - Getter
+    
     lazy var tableView: BaseTableView = {
         let x = BaseTableView(frame: self.view.bounds, style: .plain)
         x.backgroundColor = .white

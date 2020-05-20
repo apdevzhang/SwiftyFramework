@@ -8,13 +8,14 @@
 
 extension UIColor {
     
-    // MARK: - System
+    // MARK: - 主色调
+    
     static let primaryColor = dynamicColor(hexLight: "FFFFFF", hexDark: "CC00FF", transparency: 0.7)
     
-    // MARK: -
+    // MARK: - 次色调
     
-
     
+    // MARK: - 其它
     
     // MARK - 颜色适配
      static func dynamicColor(hexLight: String, hexDark: String, transparency: CGFloat) -> UIColor {
@@ -30,4 +31,5 @@ extension UIColor {
             return UIColor(hexString: hexLight, transparency: transparency)!
         }
     }
+    
 }

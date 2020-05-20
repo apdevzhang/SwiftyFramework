@@ -4,7 +4,7 @@
 //
 //  Reference RxEventHub by RxSwift Community
 //  https://github.com/RxSwiftCommunity/RxEventHub
-//  用于替代繁琐的Notification
+//  使用`PublishSubject`封装的EventBus
 
 import Foundation
 
