@@ -29,6 +29,7 @@ target 'SwiftyFramework' do
   #‘Moya-ObjectMapper/RxSwift’依赖‘Moya/RxSwift版本14.0.0-beta.2’，需要先行安装后者
   pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/khoren93/Moya-ObjectMapper.git', :branch => 'moya14'                   # https://github.com/ivanbruel/Moya-ObjectMapper
 
+  
   # 日志
   pod 'CocoaLumberjack/Swift', '~> 3.6.0'      # https://github.com/CocoaLumberjack/CocoaLumberjack
   
@@ -40,7 +41,6 @@ target 'SwiftyFramework' do
   pod 'KafkaRefresh', '~> 1.4.7'             # https://github.com/OpenFeyn/KafkaRefresh
   pod 'IQKeyboardManagerSwift', '~> 6.0'     # https://github.com/hackiftekhar/IQKeyboardManager
   pod 'Toast-Swift'                          # https://github.com/scalessec/Toast-Swift
-  pod 'WhatsNewKit', '~> 1.0'                # https://github.com/SvenTiigi/WhatsNewKit
   pod 'Hero', '~> 1.4.0'                     # https://github.com/lkzhao/Hero
   pod 'FSPagerView', '~> 0.8.3'              # https://github.com/WenchaoD/FSPagerView
   
@@ -51,14 +51,8 @@ target 'SwiftyFramework' do
   pod 'R.swift', '~> 5.0.0'                  # https://github.com/mac-cain13/R.swift
   pod 'DeviceKit', '~> 2.0'                  # https://github.com/devicekit/DeviceKit
   
-  # Not Classified
-  
   # Social
   pod 'MonkeyKing', '~> 1.16.0'              # https://github.com/nixzhu/MonkeyKing
-  pod 'UMCCommon'
-  pod 'UMCAnalytics'
-  pod 'WechatOpenSDK'
-  pod 'AlipaySDK-iOS'
 end
 
 target 'SwiftyFrameworkTests' do

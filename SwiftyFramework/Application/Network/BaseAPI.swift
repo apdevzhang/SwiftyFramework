@@ -11,11 +11,8 @@ import Moya
 struct BaseAPI {
     
     static var baseURL: URL {
-        #if DEBUG
-            return URL(string: "")!
-        #else
-            return URL(string: "")!
-        #endif
+        let baseURL = URL(string: (Bundle.main.infoDictionary!["APP_BASE_URL"] as! String).replacingOccurrences(of: "\\", with: ""))!
+        return baseURL
     }
     
     static var headers: [String: String]? {

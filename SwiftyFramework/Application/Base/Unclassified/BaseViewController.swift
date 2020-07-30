@@ -62,9 +62,13 @@ class BaseViewController: UIViewController {
         
         DDLogInfo("进入页面: \(self.className)")
         
-//        view.backgroundColor = .xFEFFFF_00
+        view.backgroundColor = .white
         
         hero.isEnabled = true
+        
+        makeUI()
+        makeConstraints()
+        bindViewModel()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -82,6 +86,10 @@ class BaseViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -89,9 +97,9 @@ class BaseViewController: UIViewController {
     
     // MARK: - Public Methods
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
+    func makeUI() {}
+    func makeConstraints() {}
+    func bindViewModel() {}
     
     ///更新暗黑模式
     func updateColorAppearance() {
@@ -150,8 +158,7 @@ extension BaseViewController: DZNEmptyDataSetSource {
     }
 }
 
-extension BaseViewController: DZNEmptyDataSetDelegate {
-    
+extension BaseViewController: DZNEmptyDataSetDelegate {    
     func emptyDataSetShouldDisplay(_ scrollView: UIScrollView!) -> Bool {
         return !isLoading.value
     }

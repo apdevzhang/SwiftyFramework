@@ -26,18 +26,23 @@ class BaseTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = .none        
+        self.selectionStyle = .none
         
         makeUI()
         makeConstraints()
+        bindViewModel()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    
+    // MARK: - Public Methods
+    
     func makeUI() {}
     func makeConstraints() {}
+    func bindViewModel() {}
     
     /// 启用光栅化
     func makeRasterize() {

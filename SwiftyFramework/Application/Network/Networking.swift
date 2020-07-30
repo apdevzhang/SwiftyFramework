@@ -23,7 +23,8 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
          session: Session = MoyaProvider<Target>.defaultAlamofireSession(),
          plugins: [PluginType] = [],
          trackInflights: Bool = false,
-         online: Observable<Bool> = connectedToInternet()) {
+//         online: Observable<Bool> = connectedToInternet()) {
+        online: Observable<Bool> = ReachabilityManager.shared.reach) {
         
         self.online = online
         self.provider = MoyaProvider(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, session: session, plugins: plugins, trackInflights: trackInflights)

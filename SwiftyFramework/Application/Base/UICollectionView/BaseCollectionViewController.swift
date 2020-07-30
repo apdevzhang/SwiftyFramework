@@ -16,11 +16,6 @@ class BaseCollectionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeUI()
-        
-        bindRefresh()
-        
-        bindViewModel()
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,7 +25,7 @@ class BaseCollectionViewController: BaseViewController {
     
     // MARK: - UI
     
-    func makeUI() {
+    override func makeUI() {
         view.addSubview(collectionView)
         
         collectionView.snp.makeConstraints { (x) in
@@ -41,13 +36,16 @@ class BaseCollectionViewController: BaseViewController {
     
     // MARK: - Public Methods
     
-    func bindViewModel() {
+    override func bindViewModel() {
+        bindRefresh()
+        
         // emptyDataSet
         let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
         updateEmptyDataSet.subscribe(onNext: { [weak self] () in
             self?.collectionView.reloadEmptyDataSet()
         }).disposed(by: rx.disposeBag)
         
+        // 禁用刷新控件（在数据固定的页面使用）
         disableRefreshTrigger.subscribe(onNext: { [weak self] (bool) in
             if bool {
                 self?.collectionView.headRefreshControl = nil
@@ -68,7 +66,7 @@ class BaseCollectionViewController: BaseViewController {
                 footerRefershControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
             } else {
                 guard let footerRefershControl = self?.collectionView.footRefreshControl else { return }
-
+                
                 footerRefershControl.resumeRefreshAvailable()
             }
         }).disposed(by: rx.disposeBag)
@@ -94,8 +92,6 @@ class BaseCollectionViewController: BaseViewController {
         
         isHeaderLoading.bind(to: collectionView.headRefreshControl.rx.isAnimating).disposed(by: rx.disposeBag)
         isFooterLoading.bind(to: collectionView.footRefreshControl.rx.isAnimating).disposed(by: rx.disposeBag)
-        
-        collectionView.footRefreshControl.autoRefreshOnFoot = true
     }
     
     
@@ -105,10 +101,9 @@ class BaseCollectionViewController: BaseViewController {
         let x = UICollectionView(frame: self.view.bounds, collectionViewLayout: flowLayout)
         x.backgroundColor = .white
         x.alwaysBounceVertical = true
-//        x.alwaysBounceHorizontal = true
+        //        x.alwaysBounceHorizontal = true
         x.emptyDataSetSource = self
         x.emptyDataSetDelegate = self
-        
         return x
     }()
     

@@ -10,7 +10,6 @@
 @import RxGesture;
 @import NSObject_Rx;
 @import RxWebKit;
-@import RxAppState;
 @import Reachability;
 @import RxReachability;
 

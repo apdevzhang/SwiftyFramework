@@ -539,7 +539,6 @@
 				23BCC9C824205F9900F9EC79 /* Frameworks */,
 				23BCC9C924205F9900F9EC79 /* Resources */,
 				8AEEF083A95E6AAA48E5799C /* [CP] Embed Pods Frameworks */,
-				24D4A3AE8084C35862729308 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -676,28 +675,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/SwiftyFramework/Resources/R.generated.swift,
+				"$SRCROOT/SwiftyFramework/Resources/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/SwiftyFramework/Resources/R.generated.swift\"\n";
-		};
-		24D4A3AE8084C35862729308 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		8AEEF083A95E6AAA48E5799C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

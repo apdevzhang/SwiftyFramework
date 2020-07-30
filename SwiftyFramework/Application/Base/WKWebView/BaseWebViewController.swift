@@ -25,7 +25,7 @@ class BaseWebViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wkWebView.customUserAgent = UserAgent.shared.userAgentString()
+//        wkWebView.customUserAgent = UserAgent.shared.userAgentString()
         
         makeUI()
         
@@ -39,7 +39,7 @@ class BaseWebViewController: BaseViewController {
     
     // MARK: - UI
     
-    func makeUI() {
+    override func makeUI() {
         self.view.addSubview(wkWebView)
         
         wkWebView.snp.makeConstraints { (x) in
@@ -109,3 +109,18 @@ class BaseWebViewController: BaseViewController {
 }
 
 
+//wkWebView.evaluateJavaScript("navigator.userAgent") { (result, error) in
+//    let userAgent = result as! String
+//    if !userAgent.hasPrefix("app_apollo") {
+//        self.wkWebView.customUserAgent = userAgent + " app_apollo"
+//    }
+//}
+//
+//rightItemButton.rx.tap
+//    .subscribe(onNext: { [weak self] (_) in
+//        if self?.wkWebView.canGoBack == true {
+//            self?.wkWebView.goBack()
+//        } else {
+//            self?.getCurrentViewController()?.navigationController?.popViewController()
+//        }
+//    }).disposed(by: rx.disposeBag)

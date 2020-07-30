@@ -1,11 +1,4 @@
 //
-//  Product.xcconfig
-//  SwiftyFramework
-//
-//  Created by BANYAN on 2020/3/19.
-//  Copyright © 2020 BANYAN. All rights reserved.
-//
-
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
@@ -13,12 +6,14 @@
 #include "Common.xcconfig"
 #include "Pods/Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.product.xcconfig"
 
-BUNDLE_DISPLAY_NAME = SwiftyFramework(Product)
 
+BUNDLE_DISPLAY_NAME = SwiftyFramework(Product)
 
 /// Bundle Identifier
 BUNDLE_IDENTIFIER = com.Better.SwiftyFramework.release
 
-
 /// APP Icon
 APP_ICON = AppIconProduct
+
+/// API
+APP_BASE_URL = "http://app.swifty.product.cn"

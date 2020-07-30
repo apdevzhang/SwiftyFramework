@@ -22,20 +22,5 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    
-    // MARK: - UI
-    
-    
-    // MARK: - ViewModel
-    
-    
-    // MARK: - Public Methods
-    
-    
-    // MARK: - Private Methods
-    
-    
-    // MARK: - Getter
     
 }

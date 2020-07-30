@@ -8,6 +8,10 @@
 
 class BaseTextField: UITextField {
     
+    // MARK: - Properties
+    
+    var maxLength: Int?
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -18,6 +22,8 @@ class BaseTextField: UITextField {
             self.textContentType = .oneTimeCode
         }
         self.autocapitalizationType = .none
+        
+        delegate = self
         
         makeUI()
         makeConstraints()
@@ -34,4 +40,21 @@ class BaseTextField: UITextField {
     func makeUI() {}
     func makeConstraints() {}
     
+}
+
+extension BaseTextField: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard let length = maxLength else {
+            return true
+        }
+        
+        guard let text = textField.text else{
+            return true
+        }
+                
+        let textLength = text.count + string.count - range.length
+        
+        return textLength <= length
+    }
 }

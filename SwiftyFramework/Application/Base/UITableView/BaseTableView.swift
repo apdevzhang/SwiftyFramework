@@ -45,7 +45,7 @@ class BaseTableView: UITableView {
         keyboardDismissMode = .onDrag
         separatorColor = .clear
 //        if #available(iOS 11.0, *) {
-//            self.contentInsetAdjustmentBehavior = .never
+//            contentInsetAdjustmentBehavior = .never
 //        }
         tableHeaderView = UIView()
         tableFooterView = UIView()
