@@ -31,9 +31,10 @@
 		236E7BBA2420C8B400717A4A /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB62420C8B400717A4A /* NetworkingProvider.swift */; };
 		236E7BBB2420C8B400717A4A /* NetworkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB72420C8B400717A4A /* NetworkingType.swift */; };
 		236E7BBF2420C8E900717A4A /* RxEventHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BBE2420C8E900717A4A /* RxEventHub.swift */; };
-		2381A8AB24D2B4440097A06E /* UIAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8AA24D2B4430097A06E /* UIAlertController+Rx.swift */; };
-		2381A8AE24D2B4500097A06E /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8AC24D2B44F0097A06E /* UIApplication+Rx.swift */; };
-		2381A8AF24D2B4500097A06E /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8AD24D2B4500097A06E /* UIViewController+Rx.swift */; };
+		2381A8B724D2BF760097A06E /* UIAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8B424D2BF760097A06E /* UIAlertController+Rx.swift */; };
+		2381A8B824D2BF760097A06E /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8B524D2BF760097A06E /* UIViewController+Rx.swift */; };
+		2381A8B924D2BF760097A06E /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8B624D2BF760097A06E /* UIApplication+Rx.swift */; };
+		2381A8BB24D2BF960097A06E /* RxKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8BA24D2BF960097A06E /* RxKeyboard.swift */; };
 		23A71A7B244468950045E56E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A71A7A244468950045E56E /* AuthManager.swift */; };
 		23A71A7D244468A70045E56E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A71A7C244468A70045E56E /* Application.swift */; };
 		23B61B512456DD0300E3792F /* UserCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B61B502456DD0300E3792F /* UserCodable.swift */; };
@@ -118,10 +119,11 @@
 		236E7BB62420C8B400717A4A /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		236E7BB72420C8B400717A4A /* NetworkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingType.swift; sourceTree = "<group>"; };
 		236E7BBE2420C8E900717A4A /* RxEventHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxEventHub.swift; sourceTree = "<group>"; };
-		2381A8AA24D2B4430097A06E /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Rx.swift"; path = "../../../Pods/RxAlertController/RxAlertController/Classes/UIAlertController+Rx.swift"; sourceTree = "<group>"; };
-		2381A8AC24D2B44F0097A06E /* UIApplication+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIApplication+Rx.swift"; path = "../../../Pods/RxAppState/Pod/Classes/UIApplication+Rx.swift"; sourceTree = "<group>"; };
-		2381A8AD24D2B4500097A06E /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Rx.swift"; path = "../../../Pods/RxAppState/Pod/Classes/UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		2381A8B024D2B4750097A06E /* Rx.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Rx.md; sourceTree = "<group>"; };
+		2381A8B424D2BF760097A06E /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Rx.swift"; sourceTree = "<group>"; };
+		2381A8B524D2BF760097A06E /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		2381A8B624D2BF760097A06E /* UIApplication+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Rx.swift"; sourceTree = "<group>"; };
+		2381A8BA24D2BF960097A06E /* RxKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxKeyboard.swift; sourceTree = "<group>"; };
 		23A71A7A244468950045E56E /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		23A71A7C244468A70045E56E /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		23A71A81244469310045E56E /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		23BCCA1324207ED400F9EC79 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2381A8BA24D2BF960097A06E /* RxKeyboard.swift */,
 				230C723424758C1700091BF7 /* ConstraintArrayDSL.swift */,
 				236E7BBE2420C8E900717A4A /* RxEventHub.swift */,
 			);
@@ -403,16 +406,16 @@
 		23BCCA3A24209EEB00F9EC79 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2381A8B024D2B4750097A06E /* Rx.md */,
 				23BCCA4024209EF700F9EC79 /* Observable+Operators.swift */,
 				23BCCA3B24209EF600F9EC79 /* Kingfisher+Rx.swift */,
 				23BCCA3F24209EF700F9EC79 /* KafkaRefresh+Rx.swift */,
 				23BCCA3C24209EF600F9EC79 /* ActivityIndicator.swift */,
 				23BCCA3E24209EF600F9EC79 /* ErrorTracker.swift */,
 				23BCCA3D24209EF600F9EC79 /* Hero+Rx.swift */,
-				2381A8AA24D2B4430097A06E /* UIAlertController+Rx.swift */,
-				2381A8AC24D2B44F0097A06E /* UIApplication+Rx.swift */,
-				2381A8AD24D2B4500097A06E /* UIViewController+Rx.swift */,
-				2381A8B024D2B4750097A06E /* Rx.md */,
+				2381A8B424D2BF760097A06E /* UIAlertController+Rx.swift */,
+				2381A8B624D2BF760097A06E /* UIApplication+Rx.swift */,
+				2381A8B524D2BF760097A06E /* UIViewController+Rx.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -673,7 +676,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/SwiftyFramework/Resources/R.generated.swift",
+				$SRCROOT/SwiftyFramework/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -776,7 +779,8 @@
 				230C72102475875A00091BF7 /* BaseViewModel.swift in Sources */,
 				230C72122475875A00091BF7 /* BaseTextField.swift in Sources */,
 				230C720F2475875A00091BF7 /* BaseViewController.swift in Sources */,
-				2381A8AB24D2B4440097A06E /* UIAlertController+Rx.swift in Sources */,
+				2381A8B724D2BF760097A06E /* UIAlertController+Rx.swift in Sources */,
+				2381A8BB24D2BF960097A06E /* RxKeyboard.swift in Sources */,
 				23BCCA792420A08900F9EC79 /* BaseAPI.swift in Sources */,
 				23BCC9CF24205F9900F9EC79 /* AppDelegate.swift in Sources */,
 				23BCCA3724209EC400F9EC79 /* GlobalFunctions.swift in Sources */,
@@ -787,7 +791,6 @@
 				23A71A7B244468950045E56E /* AuthManager.swift in Sources */,
 				23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */,
 				23BCCA672420A03900F9EC79 /* OpenSDKConst.swift in Sources */,
-				2381A8AE24D2B4500097A06E /* UIApplication+Rx.swift in Sources */,
 				23BCCA3424209EC400F9EC79 /* RxEventHubProvider.swift in Sources */,
 				230C72112475875A00091BF7 /* BaseNavigationController.swift in Sources */,
 				23BCCA3524209EC400F9EC79 /* CocoaLumberjackManager.swift in Sources */,
@@ -802,9 +805,10 @@
 				23BCCA4124209EF700F9EC79 /* Kingfisher+Rx.swift in Sources */,
 				230C72132475875A00091BF7 /* BaseView.swift in Sources */,
 				236E7BBA2420C8B400717A4A /* NetworkingProvider.swift in Sources */,
+				2381A8B824D2BF760097A06E /* UIViewController+Rx.swift in Sources */,
 				23BCCA682420A03900F9EC79 /* FontConst.swift in Sources */,
 				230C72242475878400091BF7 /* BaseTableView.swift in Sources */,
-				2381A8AF24D2B4500097A06E /* UIViewController+Rx.swift in Sources */,
+				2381A8B924D2BF760097A06E /* UIApplication+Rx.swift in Sources */,
 				230C72312475890B00091BF7 /* BaseImageView.swift in Sources */,
 				230C72162475877800091BF7 /* BaseWebViewController.swift in Sources */,
 				236E7BB82420C8B400717A4A /* Networking.swift in Sources */,
