@@ -20,6 +20,7 @@ class BaseViewController: UIViewController {
     }
     
     // refresh properities
+    
     let isLoading = BehaviorRelay(value: false)
     let headerRefreshTrigger = PublishSubject<Void>()
     let footerRefreshTrigger = PublishSubject<Void>()
@@ -35,6 +36,7 @@ class BaseViewController: UIViewController {
     
     
     // emptyDataSet properties
+    
     var emptyDataSetTitle = ""
     var emptyDataSetDescription = ""
     var emptyDataSetImage = UIImage(named: "")
@@ -63,8 +65,6 @@ class BaseViewController: UIViewController {
 //        view.backgroundColor = .xFEFFFF_00
         
         hero.isEnabled = true
-                
-        networkListener()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -89,6 +89,10 @@ class BaseViewController: UIViewController {
     
     // MARK: - Public Methods
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     ///更新暗黑模式
     func updateColorAppearance() {
         if #available(iOS 13.0, *) {
@@ -107,24 +111,7 @@ class BaseViewController: UIViewController {
             }
         }
     }
-    
-    
-    // MARK: - Private Methods
-    
-    // 网络状态监听
-    private func networkListener() {
-        // 隐藏断网toast
-        Reachability.rx.isConnected
-            .subscribe(onNext: {
-                DDLogInfo("Is connected")
-            }).disposed(by: rx.disposeBag)
-        
-        // 显示断网toast
-        Reachability.rx.isDisconnected
-            .subscribe(onNext: {
-                DDLogInfo("Is disconnected")
-            }).disposed(by: rx.disposeBag)
-    }
+
 }
 
 

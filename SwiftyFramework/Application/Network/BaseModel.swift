@@ -46,8 +46,7 @@ class BaseModel: Mappable {
         data <- map["data"]
         status <- map["code"]
         message <- map["msg"]
-        version <- map["version"]
-        
+        version <- map["version"]        
         pageNum <- map["pageNum"]
         pageSize <- map["pageSize"]
         pages <- map["pages"]

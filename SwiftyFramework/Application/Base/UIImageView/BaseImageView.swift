@@ -19,6 +19,7 @@ class BaseImageView: UIImageView {
         
         contentMode = .scaleAspectFill
         clipsToBounds = true
+        isUserInteractionEnabled = true
         
         makeUI()
         makeConstraints()

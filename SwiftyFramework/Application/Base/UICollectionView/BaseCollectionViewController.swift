@@ -63,9 +63,13 @@ class BaseCollectionViewController: BaseViewController {
         // 处理分页到底部的情况
         isLastPageTrigger.subscribe(onNext: { [weak self] (bool) in
             if bool {
-                self?.collectionView.footRefreshControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
+                guard let footerRefershControl = self?.collectionView.footRefreshControl else { return }
+                
+                footerRefershControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
             } else {
-                self?.collectionView.footRefreshControl.resumeRefreshAvailable()
+                guard let footerRefershControl = self?.collectionView.footRefreshControl else { return }
+
+                footerRefershControl.resumeRefreshAvailable()
             }
         }).disposed(by: rx.disposeBag)
     }

@@ -38,7 +38,6 @@ class BaseTableView: UITableView {
     func makeUI() {
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 100
-        sectionHeaderHeight = 40
         estimatedSectionFooterHeight = 0
         estimatedSectionHeaderHeight = 0
         backgroundColor = .white

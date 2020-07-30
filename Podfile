@@ -15,10 +15,7 @@ target 'SwiftyFramework' do
   pod 'RxDataSources', '~> 4.0'             # https://github.com/RxSwiftCommunity/RxDataSources
   pod 'RxSwiftExt', '~> 5.0'                # https://github.com/RxSwiftCommunity/RxSwiftExt
   pod 'RxGesture', '~> 3.0'                 # https://github.com/RxSwiftCommunity/RxGesture
-  pod 'RxAlertController', '~> 5.0'         # https://github.com/evgeny-sureev/RxAlertController
   pod 'RxWebKit', '~> 1.0'                  # https://github.com/RxSwiftCommunity/RxWebKit
-  pod "RxAppState", '~> 1.6.0'              # https://github.com/pixeldock/RxAppState
-  pod 'RxKeyboard', '1.0.0'                 # https://github.com/RxSwiftCommunity/RxKeyboard
   pod 'RxReachability'                      # https://github.com/RxSwiftCommunity/RxReachability
   
   

@@ -1,9 +1,6 @@
 //
-//  SwiftyFramework
-//
 //  Created by BANYAN on 2020/1/7.
 //  Copyright © 2020 BANYAN. All rights reserved.
-//
 
 protocol NetworkingType {
     associatedtype T: TargetType
@@ -12,6 +9,7 @@ protocol NetworkingType {
 }
 
 extension NetworkingType {
+    
     // 自定义Plugins，拦截器
     static var plugins: [PluginType] {
         var plugins: [PluginType] = []
@@ -20,8 +18,9 @@ extension NetworkingType {
         
         var loggerConfig = NetworkLoggerPlugin.Configuration()
         loggerConfig.logOptions = .verbose
-                        
+                
         plugins.append(NetworkLoggerPlugin(configuration: loggerConfig))
+        plugins.append(ServiceErrorPlugin())
         
         return plugins
     }
@@ -44,7 +43,7 @@ extension NetworkingType {
                 request.timeoutInterval = 10
                 closure(.success(request))
             } catch {
-//                closure(.failure(MoyaError.underlying(error, nil)))
+                closure(.failure(MoyaError.underlying(error, nil)))
                 DDLogError(error.localizedDescription)
             }
         }

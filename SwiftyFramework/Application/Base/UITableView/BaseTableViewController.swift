@@ -67,9 +67,13 @@ class BaseTableViewController: BaseViewController {
         // 处理分页到底部的情况
         isLastPageTrigger.subscribe(onNext: { [weak self] (bool) in
             if bool {
-                self?.tableView.footRefreshControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
+                guard let footerRefershControl = self?.tableView.footRefreshControl else { return }
+                
+                footerRefershControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
             } else {
-                self?.tableView.footRefreshControl.resumeRefreshAvailable()
+                guard let footerRefershControl = self?.tableView.footRefreshControl else { return }
+
+                footerRefershControl.resumeRefreshAvailable()
             }
         }).disposed(by: rx.disposeBag)
     }
