@@ -11,19 +11,16 @@ import KafkaRefresh
 
 class BaseTableViewController: BaseViewController {
     
-    // MARK: - Properties
-        
-    
     // MARK: - Lifecycle
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,7 +32,7 @@ class BaseTableViewController: BaseViewController {
     
     override func makeUI() {
         view.addSubview(tableView)
-
+        
         tableView.snp.makeConstraints { (x) in
             x.edges.equalToSuperview()
         }
@@ -49,35 +46,39 @@ class BaseTableViewController: BaseViewController {
         
         //  emptyDataSet
         let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
-        updateEmptyDataSet.subscribe(onNext: { [weak self] () in
-            self?.tableView.reloadEmptyDataSet()
-        }).disposed(by: rx.disposeBag)
         
-        // 禁用刷新控件（在数据固定的页面使用）
-        disableRefreshTrigger.subscribe(onNext: { [weak self] (bool) in
-            if bool == true {
-                self?.tableView.headRefreshControl = nil
-                self?.tableView.footRefreshControl = nil
-            }
-        }).disposed(by: rx.disposeBag)
+        updateEmptyDataSet
+            .subscribe(onNext: { [weak self] () in
+                guard let self = self else { return }
+                
+                self.tableView.reloadEmptyDataSet()
+            }).disposed(by: rx.disposeBag)
         
         // 处理空白页点击事件（重新触发下拉刷新）
-        emptyDataSetViewTap.subscribe(onNext: { [weak self] _ in
-            self?.headerRefreshTrigger.onNext(())
+        emptyDataSetViewTap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                
+                self.headerRefreshTrigger.onNext(())
+            }).disposed(by: rx.disposeBag)
+        
+        // 禁用刷新控件（在数据固定的页面使用）
+        disableRefreshTrigger.filter { (boolValue) -> Bool in
+            return true
+        }.subscribe(onNext: { [weak self] (_) in
+            guard let self = self else { return }
+            
+            self.tableView.headRefreshControl = nil
+            self.tableView.footRefreshControl = nil
         }).disposed(by: rx.disposeBag)
         
         // 处理分页到底部的情况
-        isLastPageTrigger.subscribe(onNext: { [weak self] (bool) in
-            if bool == true {
-                guard let footerRefershControl = self?.tableView.footRefreshControl else { return }
+        isLastPageTrigger
+            .subscribe(onNext: { [weak self] (isLast) in
+                guard let self = self, let footerRefershControl = self.tableView.footRefreshControl else { return }
                 
-                footerRefershControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
-            } else {
-                guard let footerRefershControl = self?.tableView.footRefreshControl else { return }
-
-                footerRefershControl.resumeRefreshAvailable()
-            }
-        }).disposed(by: rx.disposeBag)
+                isLast == true ? footerRefershControl.endRefreshingAndNoLongerRefreshing(withAlertText: "") : footerRefershControl.resumeRefreshAvailable()
+            }).disposed(by: rx.disposeBag)
     }
     
     func headerRefresh() -> Observable<Void> {
@@ -91,18 +92,22 @@ class BaseTableViewController: BaseViewController {
     
     private func bindRefresh() {
         tableView.bindGlobalStyle(forHeadRefreshHandler: { [weak self] in
-            self?.headerRefreshTrigger.onNext(())
+            guard let self = self else { return }
+            
+            self.headerRefreshTrigger.onNext(())
         })
         
         tableView.bindGlobalStyle(forFootRefreshHandler: { [weak self] in
-            self?.footerRefreshTrigger.onNext(())
+            guard let self = self else { return }
+            
+            self.footerRefreshTrigger.onNext(())
         })
         
         isHeaderLoading.bind(to: tableView.headRefreshControl.rx.isAnimating).disposed(by: rx.disposeBag)
         isFooterLoading.bind(to: tableView.footRefreshControl.rx.isAnimating).disposed(by: rx.disposeBag)
     }
     
-
+    
     // MARK: - Getter
     
     lazy var tableView: BaseTableView = {

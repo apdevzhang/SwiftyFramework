@@ -34,13 +34,16 @@ class BaseCollectionViewCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
+    
+    // MARK: - Public Methods
+    
     func makeUI() {}
     func makeConstraints() {}
     
     /// 启用光栅化
     func makeRasterize() {
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
     }
     
 }

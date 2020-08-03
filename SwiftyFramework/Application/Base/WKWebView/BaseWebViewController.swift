@@ -25,10 +25,6 @@ class BaseWebViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        wkWebView.customUserAgent = UserAgent.shared.userAgentString()
-        
-        makeUI()
-        
         webViewConfiguration()
     }
     
@@ -40,20 +36,13 @@ class BaseWebViewController: BaseViewController {
     // MARK: - UI
     
     override func makeUI() {
-        self.view.addSubview(wkWebView)
+        view.addSubview(wkWebView)
         
         wkWebView.snp.makeConstraints { (x) in
             x.edges.equalToSuperview()
         }
     }
-
     
-    // MARK: - Public Methods
-    
-    // 加载进度管理（可根据项目需要设置加载动画）
-    func webViewLoading(_ progress: Double) {
-        DDLogInfo("webView加载进度：\(progress)%")
-    }
     
     // MARK: - Private Methods
     
@@ -73,54 +62,19 @@ class BaseWebViewController: BaseViewController {
             .subscribe(onNext: { [weak self] (title) in
                 self?.navigationTitle = self?.navigationTitle ?? title!
             }).disposed(by: rx.disposeBag)
-        
-        // webView url
-        wkWebView.rx.url
-            .share(replay: 1)
-            .subscribe(onNext: { [weak self] (url) in
-                DDLogInfo("URL: \(String(describing: url))")
-            }).disposed(by: rx.disposeBag)
-        
+
         // 加载进度
         wkWebView.rx.estimatedProgress
             .share(replay: 1)
-            .subscribe(onNext: { [weak self] (progress) in
-                self?.webViewLoading(progress)
+            .subscribe(onNext: { (progress) in
+                // 加载进度管理（可根据项目需要设置加载动画）
             }).disposed(by: rx.disposeBag)
-        
-        // 页面加载完毕时调用
-        wkWebView.rx
-            .didFinishNavigation
-            .debug("didFinishNavigation")
-            .subscribe(onNext: { _ in
-                
-            })
-            .disposed(by: rx.disposeBag)
         
         wkWebView.rx.loading
             .share(replay: 1)
             .subscribe(onNext: { (loading) in
-                DDLogInfo("loading: \(loading)")
-                
                 UIApplication.shared.isNetworkActivityIndicatorVisible = loading
             }).disposed(by: rx.disposeBag)
     }
     
 }
-
-
-//wkWebView.evaluateJavaScript("navigator.userAgent") { (result, error) in
-//    let userAgent = result as! String
-//    if !userAgent.hasPrefix("app_apollo") {
-//        self.wkWebView.customUserAgent = userAgent + " app_apollo"
-//    }
-//}
-//
-//rightItemButton.rx.tap
-//    .subscribe(onNext: { [weak self] (_) in
-//        if self?.wkWebView.canGoBack == true {
-//            self?.wkWebView.goBack()
-//        } else {
-//            self?.getCurrentViewController()?.navigationController?.popViewController()
-//        }
-//    }).disposed(by: rx.disposeBag)

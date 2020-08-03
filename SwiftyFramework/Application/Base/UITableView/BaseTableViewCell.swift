@@ -6,8 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import RxSwift
-
 class BaseTableViewCell: UITableViewCell {
 
     // MARK: - Properties
@@ -46,8 +44,8 @@ class BaseTableViewCell: UITableViewCell {
     
     /// 启用光栅化
     func makeRasterize() {
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
     }
     
 }

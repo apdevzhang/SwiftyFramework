@@ -6,7 +6,6 @@
 //  Copyright © 2018 Khoren Markosyan. All rights reserved.
 //
 
-import Foundation
 import RxCocoa
 import RxSwift
 import KafkaRefresh

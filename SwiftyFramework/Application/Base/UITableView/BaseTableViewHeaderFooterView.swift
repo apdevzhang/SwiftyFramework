@@ -12,6 +12,7 @@ class BaseTableViewHeaderFooterView: UITableViewHeaderFooterView {
     
      var disposeBag = DisposeBag()
     
+    
     // MARK: - Lifecycle
     
     override func prepareForReuse() {
@@ -35,13 +36,16 @@ class BaseTableViewHeaderFooterView: UITableViewHeaderFooterView {
         super.init(coder: aDecoder)
     }
     
+    
+    // MARK: - Public Methods
+    
     func makeUI() {}
     func makeConstraints() {}
     
     /// 启用光栅化
     func makeRasterize() {
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
     }
     
 }

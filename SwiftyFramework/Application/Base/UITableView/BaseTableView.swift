@@ -8,9 +8,6 @@
 
 class BaseTableView: UITableView {
 
-    // MARK: - Properties
-    
-    
     // MARK: - Lifecycle
     
     init() {
@@ -28,12 +25,15 @@ class BaseTableView: UITableView {
         
         makeUI()
     }
+    
+    override func reloadData() {
+        super.reloadData()
+        
+        if visibleCells.isEmpty { return }
+    }
 
     
     // MARK: - Public Methods
-    
-    
-    // MARK: - Private Methods
     
     func makeUI() {
         rowHeight = UITableView.automaticDimension
@@ -50,14 +50,5 @@ class BaseTableView: UITableView {
         tableHeaderView = UIView()
         tableFooterView = UIView()
     }
-    
-    override func reloadData() {
-        super.reloadData()
         
-        if visibleCells.isEmpty { return }
-    }
-    
-    
-    // MARK: - Getter
-    
 }

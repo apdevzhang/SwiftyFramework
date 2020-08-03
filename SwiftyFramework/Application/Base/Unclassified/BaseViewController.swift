@@ -19,6 +19,7 @@ class BaseViewController: UIViewController {
         }
     }
     
+    
     // refresh properities
     
     let isLoading = BehaviorRelay(value: false)
@@ -54,7 +55,7 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        updateColorAppearance()
+//        updateColorAppearance()
     }
         
     override func viewDidLoad() {
@@ -75,7 +76,6 @@ class BaseViewController: UIViewController {
         return .lightContent
     }
     
-    // 暗夜模式监听
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
@@ -101,8 +101,11 @@ class BaseViewController: UIViewController {
     func makeConstraints() {}
     func bindViewModel() {}
     
+    
+    // MARK: - Private Methods
+    
     ///更新暗黑模式
-    func updateColorAppearance() {
+    private func updateColorAppearance() {
         if #available(iOS 13.0, *) {
             if let state = AppearanceState(rawValue: AppearanceDefault.appearanceState) {
                 switch state {

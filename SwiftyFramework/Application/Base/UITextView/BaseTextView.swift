@@ -6,13 +6,14 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-class BaseTextView: UITextView {
+class BaseTextView: TextViewMaster {
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         
         makeUI()
         makeConstraints()
+        bindViewModel()
     }
     
     override func layoutSubviews() {
@@ -23,7 +24,11 @@ class BaseTextView: UITextView {
         super.init(coder: aDecoder)
     }
     
+    
+    // MARK: - Public Methods
+    
     func makeUI() {}
     func makeConstraints() {}
+    func bindViewModel() {}
     
 }

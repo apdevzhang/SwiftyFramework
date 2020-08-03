@@ -46,7 +46,6 @@ extension Collection {
 }
 
 extension String {
-
     func htmlAttributedString(with fontName: String, fontSize: Int, colorHex: String) -> NSAttributedString? {
         do {
             let cssPrefix = "<style>* { font-family: \(fontName); color: #\(colorHex); font-size: \(fontSize); }</style>"

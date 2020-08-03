@@ -11,12 +11,6 @@ class BaseImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        #if DEBUG
-            backgroundColor = .random
-        #else
-
-        #endif
-        
         contentMode = .scaleAspectFill
         clipsToBounds = true
         isUserInteractionEnabled = true
@@ -32,6 +26,9 @@ class BaseImageView: UIImageView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    
+    // MARK: - Public Methods
     
     func makeUI() {}
     func makeConstraints() {}

@@ -5,7 +5,7 @@
 //  Created by Olar's Mac on 1/21/20.
 //  Copyright © 2020 Adie Olalekan. All rights reserved.
 //
-import UIKit
+
 import RxCocoa
 import RxSwift
 import Kingfisher

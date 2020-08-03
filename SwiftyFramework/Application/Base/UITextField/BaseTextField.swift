@@ -10,7 +10,9 @@ class BaseTextField: UITextField {
     
     // MARK: - Properties
     
+    /// 最大输入长度
     var maxLength: Int?
+    
     
     // MARK: - Lifecycle
     
@@ -36,6 +38,9 @@ class BaseTextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    
+    // MARK: - Public Methods
     
     func makeUI() {}
     func makeConstraints() {}

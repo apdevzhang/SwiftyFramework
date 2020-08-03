@@ -6,11 +6,7 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-
 class BaseView: UIView {
-
-    // MARK: - Properties
-    
     
     // MARK: - Lifecycle
     
@@ -30,6 +26,9 @@ class BaseView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    
+    // MARK: - Public Methods
     
     func makeUI() {}
     func makeConstraints() {}

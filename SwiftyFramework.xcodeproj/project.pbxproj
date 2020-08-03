@@ -72,6 +72,7 @@
 		23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7D2420A0F100F9EC79 /* R.generated.swift */; };
 		23BCCA812420A17900F9EC79 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */; };
 		23BCCA822420A17900F9EC79 /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA802420A17800F9EC79 /* CommonAPI.swift */; };
+		23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */; };
 		24AD23677F428C6D0FD4EF69 /* Pods_SwiftyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2021D721B087497622846363 /* Pods_SwiftyFramework.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +172,7 @@
 		23D1783A24BB3BE500A7EF16 /* SwiftyFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783B24BB3BE500A7EF16 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783C24BB3BE500A7EF16 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewMaster.swift; sourceTree = "<group>"; };
 		3EB449CDDBCFEF6D263B9111 /* Pods-SwiftyFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFrameworkTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyFrameworkTests/Pods-SwiftyFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D37E902348C94A04E16F2AF /* Pods-SwiftyFramework.product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFramework.product.xcconfig"; path = "Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.product.xcconfig"; sourceTree = "<group>"; };
 		6D4B3497A1A6022A7A670977 /* Pods-SwiftyFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFramework.release.xcconfig"; path = "Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		230C7228247587C100091BF7 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
+				23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */,
 				230C722D2475889D00091BF7 /* BaseTextView.swift */,
 			);
 			path = UITextView;
@@ -776,6 +779,7 @@
 				23BCCA3424209EC400F9EC79 /* RxEventHubProvider.swift in Sources */,
 				230C72112475875A00091BF7 /* BaseNavigationController.swift in Sources */,
 				23BCCA3524209EC400F9EC79 /* CocoaLumberjackManager.swift in Sources */,
+				23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */,
 				230C722C2475880D00091BF7 /* BaseButton.swift in Sources */,
 				23BCCA4424209EF700F9EC79 /* ErrorTracker.swift in Sources */,
 				23BCCA4524209EF700F9EC79 /* KafkaRefresh+Rx.swift in Sources */,

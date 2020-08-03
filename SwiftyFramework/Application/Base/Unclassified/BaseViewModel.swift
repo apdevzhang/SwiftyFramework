@@ -67,7 +67,7 @@ class BaseViewModel: NSObject {
             }).disposed(by: rx.disposeBag)
         
         errorResponse.subscribe(onNext: { (errorResponse) in
-            DDLogInfo("\(errorResponse.message)")
+            DDLogError("\(String(describing: errorResponse.message))")
         }).disposed(by: rx.disposeBag)
     }
     

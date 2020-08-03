@@ -44,6 +44,9 @@ class BaseButton: UIButton {
         super.init(coder: aDecoder)
     }
     
+    
+    // MARK: - Public Methods    
+    
     func makeUI() {}
     func makeConstraints() {}
     

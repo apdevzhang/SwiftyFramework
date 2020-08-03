@@ -8,43 +8,18 @@
 
 import Hero
 
-class BaseNavigationController: UINavigationController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-    
-    // MARK: - Properties
-    
-    
+class BaseNavigationController: UINavigationController {
+
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.interactivePopGestureRecognizer?.delegate = self
-        
-        self.delegate = self        
         
         navigationConfig()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    
-    // MARK: - UI
-    
-    func navigationConfig() {
-        hero.isEnabled = true
-        hero.modalAnimationType = .autoReverse(presenting: .fade)
-        hero.navigationAnimationType = .autoReverse(presenting: .slide(direction: .left))
-        
-        navigationBar.isTranslucent = false
-        
-        navigationBar.barTintColor = .white
-        
-//        navigationBar.titleTextAttributes = [
-//            NSAttributedString.Key.foregroundColor : UIColor.x222222_00,
-//            NSAttributedString.Key.font : UIFont.medium18
-//        ]
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -64,12 +39,22 @@ class BaseNavigationController: UINavigationController, UINavigationControllerDe
         return self.topViewController
     }
     
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-
-    }
     
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-
+    // MARK: - Private Methods
+    
+    private func navigationConfig() {
+        hero.isEnabled = true
+        hero.modalAnimationType = .autoReverse(presenting: .fade)
+        hero.navigationAnimationType = .autoReverse(presenting: .slide(direction: .left))
+        
+        navigationBar.isTranslucent = false
+        
+        navigationBar.barTintColor = .white
+        
+        //        navigationBar.titleTextAttributes = [
+        //            NSAttributedString.Key.foregroundColor : UIColor.x222222_00,
+        //            NSAttributedString.Key.font : UIFont.medium18
+        //        ]
     }
     
 }

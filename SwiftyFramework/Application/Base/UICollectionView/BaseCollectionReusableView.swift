@@ -36,6 +36,9 @@ class BaseCollectionReusableView: UICollectionReusableView {
         super.init(coder: aDecoder)
     }
     
+    
+    // MARK: - Public Methods
+    
     func makeUI() {}
     func makeConstraints() {}
     
