@@ -51,5 +51,6 @@ class BaseModel: Mappable {
         pageSize <- map["pageSize"]
         pages <- map["pages"]
     }
+    
 }
 

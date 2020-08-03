@@ -23,7 +23,6 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
          session: Session = MoyaProvider<Target>.defaultAlamofireSession(),
          plugins: [PluginType] = [],
          trackInflights: Bool = false,
-//         online: Observable<Bool> = connectedToInternet()) {
         online: Observable<Bool> = ReachabilityManager.shared.reach) {
         
         self.online = online
@@ -40,5 +39,6 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
                     .filterSuccessfulStatusCodes()
         }
     }
+    
 }
 

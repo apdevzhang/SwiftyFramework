@@ -6,7 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
 import MoyaSugar
 
 enum AuthenticationAPI {
