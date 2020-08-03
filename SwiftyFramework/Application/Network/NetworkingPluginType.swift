@@ -23,6 +23,12 @@ public let networkActivityPlugin = NetworkActivityPlugin { (change,_)  -> () in
     }
 }
 
+public func networkLoggerConfiguration() -> NetworkLoggerPlugin.Configuration {
+    var loggerConfig = NetworkLoggerPlugin.Configuration()
+    loggerConfig.logOptions = .verbose
+    return loggerConfig
+}
+
 public final class ServiceErrorPlugin: PluginType {
     
     public func willSend(_ request: RequestType, target: TargetType) {
@@ -37,7 +43,7 @@ public final class ServiceErrorPlugin: PluginType {
             case .statusCode(let response):
                 ServiceErrorManager.shared.errorResponse.onNext(ServiceErrorResponse(status: response.statusCode))
                 break
-            case .underlying(let error as NSError, let response):
+            case .underlying(let error as NSError, let _):
                 ServiceErrorManager.shared.errorResponse.onNext(ServiceErrorResponse(status: error.code))
                 break
             default:

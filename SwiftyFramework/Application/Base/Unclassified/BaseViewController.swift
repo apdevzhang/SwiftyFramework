@@ -11,15 +11,14 @@ import DZNEmptyDataSet
 class BaseViewController: UIViewController {
     
     // MARK: - Properties
-        
+    
     /// 导航栏标题
     var navigationTitle = "" {
         didSet {
             navigationItem.title = navigationTitle
         }
     }
-    
-    
+        
     // refresh properities
     
     let isLoading = BehaviorRelay(value: false)
@@ -52,24 +51,8 @@ class BaseViewController: UIViewController {
         DDLogInfo("退出页面：\(self.className)")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        updateColorAppearance()
-    }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()        
-        
-        DDLogInfo("进入页面: \(self.className)")
-        
-        view.backgroundColor = .white
-        
-        hero.isEnabled = true
-        
-        makeUI()
-        makeConstraints()
-        bindViewModel()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -90,8 +73,32 @@ class BaseViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //        updateColorAppearance()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        DDLogInfo("进入页面: \(self.className)")
+        
+        view.backgroundColor = .white
+        
+        hero.isEnabled = true
+        
+        ReachabilityManager.shared.reach
+            .subscribe(onNext: { [weak self] (boolValue) in
+                guard let self = self else { return }
+                
+                boolValue == true ? self.emptyDataSetNetworkOnline() : self.emptyDataSetOffNetwork()
+            }).disposed(by: rx.disposeBag)
+        
+        
+        makeUI()
+        makeConstraints()
+        bindViewModel()
     }
     
     
@@ -101,11 +108,11 @@ class BaseViewController: UIViewController {
     func makeConstraints() {}
     func bindViewModel() {}
     
-    
-    // MARK: - Private Methods
+    func emptyDataSetOffNetwork() {}
+    func emptyDataSetNetworkOnline() {}
     
     ///更新暗黑模式
-    private func updateColorAppearance() {
+    func updateColorAppearance() {
         if #available(iOS 13.0, *) {
             if let state = AppearanceState(rawValue: AppearanceDefault.appearanceState) {
                 switch state {
@@ -122,9 +129,8 @@ class BaseViewController: UIViewController {
             }
         }
     }
-
+    
 }
-
 
 extension BaseViewController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -135,7 +141,6 @@ extension BaseViewController: UIGestureRecognizerDelegate {
 }
 
 extension BaseViewController: DZNEmptyDataSetSource {
-    
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         return NSAttributedString(string: emptyDataSetTitle)
     }

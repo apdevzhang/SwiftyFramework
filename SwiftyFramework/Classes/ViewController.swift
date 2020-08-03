@@ -6,21 +6,32 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     // MARK: - Properties
     
     
     // MARK: - Lifecycle
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DDLogInfo("skoal~")
+        ServiceErrorManager.shared.errorResponse
+            .subscribe(onNext: { [weak self] (response) in
+                DDLogInfo("\(response.message)")
+            }).disposed(by: rx.disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    override func emptyDataSetOffNetwork() {
+        emptyDataSetTitle = "断网空白页"
+    }
+    
+    override func emptyDataSetNetworkOnline() {
+        emptyDataSetTitle = "有网无数据"
     }
     
 }

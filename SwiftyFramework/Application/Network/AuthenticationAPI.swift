@@ -19,9 +19,9 @@ extension AuthenticationAPI: SugarTargetType {
     var route: Route {
         switch self {
         case .login:
-            return .post("/appApi/appUser/login")
+            return .post("/appApi/user/login")
         case .register:
-            return .post("/appApi/appUser/register")
+            return .post("/appApi/user/register")
         }
     }
     

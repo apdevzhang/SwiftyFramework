@@ -27,7 +27,7 @@
 		230C723324758B5600091BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C723224758B5600091BF7 /* ViewController.swift */; };
 		230C723524758C1700091BF7 /* ConstraintArrayDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C723424758C1700091BF7 /* ConstraintArrayDSL.swift */; };
 		236E7BB82420C8B400717A4A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB42420C8B400717A4A /* Networking.swift */; };
-		236E7BB92420C8B400717A4A /* PluginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB52420C8B400717A4A /* PluginType.swift */; };
+		236E7BB92420C8B400717A4A /* NetworkingPluginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB52420C8B400717A4A /* NetworkingPluginType.swift */; };
 		236E7BBA2420C8B400717A4A /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB62420C8B400717A4A /* NetworkingProvider.swift */; };
 		236E7BBB2420C8B400717A4A /* NetworkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BB72420C8B400717A4A /* NetworkingType.swift */; };
 		236E7BBF2420C8E900717A4A /* RxEventHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E7BBE2420C8E900717A4A /* RxEventHub.swift */; };
@@ -71,7 +71,6 @@
 		23BCCA7B2420A08900F9EC79 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA742420A08900F9EC79 /* BaseModel.swift */; };
 		23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7D2420A0F100F9EC79 /* R.generated.swift */; };
 		23BCCA812420A17900F9EC79 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */; };
-		23BCCA822420A17900F9EC79 /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA802420A17800F9EC79 /* CommonAPI.swift */; };
 		23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */; };
 		24AD23677F428C6D0FD4EF69 /* Pods_SwiftyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2021D721B087497622846363 /* Pods_SwiftyFramework.framework */; };
 /* End PBXBuildFile section */
@@ -116,7 +115,7 @@
 		230C723224758B5600091BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		230C723424758C1700091BF7 /* ConstraintArrayDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintArrayDSL.swift; sourceTree = "<group>"; };
 		236E7BB42420C8B400717A4A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		236E7BB52420C8B400717A4A /* PluginType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginType.swift; sourceTree = "<group>"; };
+		236E7BB52420C8B400717A4A /* NetworkingPluginType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingPluginType.swift; sourceTree = "<group>"; };
 		236E7BB62420C8B400717A4A /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		236E7BB72420C8B400717A4A /* NetworkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingType.swift; sourceTree = "<group>"; };
 		236E7BBE2420C8E900717A4A /* RxEventHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxEventHub.swift; sourceTree = "<group>"; };
@@ -168,7 +167,6 @@
 		23BCCA742420A08900F9EC79 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		23BCCA7D2420A0F100F9EC79 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
-		23BCCA802420A17800F9EC79 /* CommonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
 		23D1783A24BB3BE500A7EF16 /* SwiftyFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783B24BB3BE500A7EF16 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783C24BB3BE500A7EF16 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -468,13 +466,12 @@
 				236E7BB42420C8B400717A4A /* Networking.swift */,
 				236E7BB72420C8B400717A4A /* NetworkingType.swift */,
 				236E7BB62420C8B400717A4A /* NetworkingProvider.swift */,
-				236E7BB52420C8B400717A4A /* PluginType.swift */,
+				236E7BB52420C8B400717A4A /* NetworkingPluginType.swift */,
 				23BCCA742420A08900F9EC79 /* BaseModel.swift */,
 				23BCCA702420A08900F9EC79 /* ErrorResponse.swift */,
 				23BCCA6E2420A08900F9EC79 /* ReachabilityManager.swift */,
 				23BCCA722420A08900F9EC79 /* BaseAPI.swift */,
 				23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */,
-				23BCCA802420A17800F9EC79 /* CommonAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -760,7 +757,7 @@
 				230C721B2475877F00091BF7 /* BaseCollectionReusableView.swift in Sources */,
 				23BCCA772420A08900F9EC79 /* ErrorResponse.swift in Sources */,
 				23B61B532456DD0800E3792F /* UserAgent.swift in Sources */,
-				236E7BB92420C8B400717A4A /* PluginType.swift in Sources */,
+				236E7BB92420C8B400717A4A /* NetworkingPluginType.swift in Sources */,
 				230C72102475875A00091BF7 /* BaseViewModel.swift in Sources */,
 				230C72122475875A00091BF7 /* BaseTextField.swift in Sources */,
 				230C720F2475875A00091BF7 /* BaseViewController.swift in Sources */,
@@ -784,7 +781,6 @@
 				23BCCA4424209EF700F9EC79 /* ErrorTracker.swift in Sources */,
 				23BCCA4524209EF700F9EC79 /* KafkaRefresh+Rx.swift in Sources */,
 				23BCCA752420A08900F9EC79 /* ReachabilityManager.swift in Sources */,
-				23BCCA822420A17900F9EC79 /* CommonAPI.swift in Sources */,
 				23B61B512456DD0300E3792F /* UserCodable.swift in Sources */,
 				23BCCA4624209EF700F9EC79 /* Observable+Operators.swift in Sources */,
 				23BCCA4324209EF700F9EC79 /* Hero+Rx.swift in Sources */,

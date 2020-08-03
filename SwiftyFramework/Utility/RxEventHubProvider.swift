@@ -14,9 +14,12 @@ struct SubjectDefaultProvider {
 }
 
 // MARK: - Custom
+
 class EventHubDefaultProvider: RxEventProvider<SubjectDefaultProvider> {}
 
+
 // MARK: - Data Type
+
 class EventHubDictionaryProvider: RxEventProvider<Dictionary<String, Any>> {}
 
 class EventHubStringProvider: RxEventProvider<String> {}
@@ -25,6 +28,8 @@ class EventHubIntProvider: RxEventProvider<Int> {}
 
 class EventHubJSONStringProvider: RxEventProvider<String> {}
 
+
 // MARK: - 其它声明
+
 /// 登录成功
 class EventHubLoginSuccessProvider: RxEventProvider<Void> {}

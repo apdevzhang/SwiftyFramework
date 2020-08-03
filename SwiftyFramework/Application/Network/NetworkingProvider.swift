@@ -28,22 +28,5 @@ extension AuthenticationNetworking {
     }
 }
 
-// MARK: 通用
-struct CommonNetworking: NetworkingType {
-    typealias T = CommonAPI
-    
-    let provider: OnlineProvider<CommonAPI>
-}
-
-extension CommonNetworking {
-    func request(_ token: CommonAPI) -> Observable<Moya.Response> {
-        let autualRequest = self.provider.request(token)
-        return autualRequest
-    }
-    
-    static func stubbingCommonNetworking() -> CommonNetworking {
-        return CommonNetworking(provider: OnlineProvider(endpointClosure: endpointsClosure(), requestClosure: endpointResolver(), stubClosure: MoyaProvider.neverStub, plugins: plugins, online: .just(true)))
-    }
-}
 
 
