@@ -8,6 +8,11 @@
 
 class BaseCollectionViewController: BaseViewController {
     
+    // MARK: - Properties
+    
+    let isLastPageTrigger = PublishSubject<Bool>()
+    
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -33,19 +38,17 @@ class BaseCollectionViewController: BaseViewController {
     
     // MARK: - Public Methods
     
-    override func bindViewModel() {
-        // TODO: 使用defer
+    override func bindViewModel() {        
         bindRefresh()
         
         // emptyDataSet
-        let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
-        
-        updateEmptyDataSet
+        isLoading.mapToVoid()
             .subscribe(onNext: { [weak self] (_) in
                 guard let self = self else { return }
                 
                 self.collectionView.reloadEmptyDataSet()
             }).disposed(by: rx.disposeBag)
+        
         
         // 处理空白页点击事件（重新触发下拉刷新）
         emptyDataSetViewTap

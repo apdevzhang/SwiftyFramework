@@ -62,11 +62,11 @@ class BaseViewModel: NSObject {
                     }
                 } catch {
                     DDLogError("\(error.localizedDescription)")
-                }
-                
+                }                
             }).disposed(by: rx.disposeBag)
         
-        errorResponse.subscribe(onNext: { (errorResponse) in
+        errorResponse
+            .subscribe(onNext: { (errorResponse) in
             DDLogError("\(String(describing: errorResponse.message))")
         }).disposed(by: rx.disposeBag)
     }

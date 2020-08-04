@@ -10,7 +10,7 @@
 BUNDLE_DISPLAY_NAME = SwiftyFramework(Product)
 
 /// Bundle Identifier
-BUNDLE_IDENTIFIER = com.Better.SwiftyFramework.release
+BUNDLE_IDENTIFIER = com.Better.SwiftyFramework.product
 
 /// APP Icon
 APP_ICON = AppIconProduct

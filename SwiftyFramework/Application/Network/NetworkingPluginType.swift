@@ -43,7 +43,7 @@ public final class ServiceErrorPlugin: PluginType {
             case .statusCode(let response):
                 ServiceErrorManager.shared.errorResponse.onNext(ServiceErrorResponse(status: response.statusCode))
                 break
-            case .underlying(let error as NSError, let _):
+            case .underlying(let error as NSError, _):
                 ServiceErrorManager.shared.errorResponse.onNext(ServiceErrorResponse(status: error.code))
                 break
             default:

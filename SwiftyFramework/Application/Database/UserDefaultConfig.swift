@@ -6,8 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
-
 struct UserDefaultConfig {
     
     // MARK: - 系统相关

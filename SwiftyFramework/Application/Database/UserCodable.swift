@@ -6,8 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import UIKit
-
 enum Gender: Int, Codable {
     case male, female, unkonw
     

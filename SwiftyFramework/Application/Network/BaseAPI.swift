@@ -6,8 +6,6 @@
 //  Copyright © 2019 Apus. All rights reserved.
 //
 
-import Moya
-
 struct BaseAPI {
     
     static var baseURL: URL {

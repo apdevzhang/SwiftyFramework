@@ -11,6 +11,11 @@ import KafkaRefresh
 
 class BaseTableViewController: BaseViewController {
     
+    // MARK: - Properties
+    
+    let isLastPageTrigger = PublishSubject<Bool>()
+    
+    
     // MARK: - Lifecycle
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -45,10 +50,8 @@ class BaseTableViewController: BaseViewController {
         bindRefresh()
         
         //  emptyDataSet
-        let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
-        
-        updateEmptyDataSet
-            .subscribe(onNext: { [weak self] () in
+        isLoading.mapToVoid()
+            .subscribe(onNext: { [weak self] (_) in
                 guard let self = self else { return }
                 
                 self.tableView.reloadEmptyDataSet()

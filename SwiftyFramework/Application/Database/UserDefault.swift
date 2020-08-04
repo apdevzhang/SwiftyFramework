@@ -6,8 +6,6 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-import Foundation
-
 @propertyWrapper
 struct UserDefault<T> {
     let key: String

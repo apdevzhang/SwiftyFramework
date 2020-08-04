@@ -424,10 +424,10 @@
 		23BCCA4824209F7900F9EC79 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				230C72202475878400091BF7 /* BaseTableView.swift */,
-				230C721E2475878400091BF7 /* BaseTableViewCell.swift */,
-				230C721D2475878400091BF7 /* BaseTableViewController.swift */,
 				230C721F2475878400091BF7 /* BaseTableViewHeaderFooterView.swift */,
+				230C721E2475878400091BF7 /* BaseTableViewCell.swift */,
+				230C72202475878400091BF7 /* BaseTableView.swift */,
+				230C721D2475878400091BF7 /* BaseTableViewController.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -932,7 +932,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Better.SwiftyFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftyFramework/Resources/SwiftyFramework-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1113,7 +1113,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Better.SwiftyFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftyFramework/Resources/SwiftyFramework-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1136,7 +1136,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Better.SwiftyFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftyFramework/Resources/SwiftyFramework-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

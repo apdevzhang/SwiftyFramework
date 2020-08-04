@@ -7,7 +7,8 @@
 
 import ObjectMapper
 
-// MARK: - error response for request success
+
+// MARK: - Error response for request success
 
 enum APIError: Swift.Error {
     case responseError(response: ErrorResponse)
@@ -30,7 +31,7 @@ struct ErrorResponse: Mappable {
 }
 
 
-// MARK: - error response for request failed
+// MARK: - Error response for request failed
 
 class ServiceErrorManager: NSObject {
     

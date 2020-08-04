@@ -21,17 +21,17 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
 
         ServiceErrorManager.shared.errorResponse
-            .subscribe(onNext: { [weak self] (response) in
+            .subscribe(onNext: { (response) in
                 DDLogInfo("\(response.message)")
             }).disposed(by: rx.disposeBag)
     }
     
     override func emptyDataSetOffNetwork() {
-        emptyDataSetTitle = "断网空白页"
+        emptyDataSetTitle = NSAttributedString(string: "断网空白页")
     }
     
     override func emptyDataSetNetworkOnline() {
-        emptyDataSetTitle = "有网无数据"
+        emptyDataSetTitle = NSAttributedString(string: "有网无数据")
     }
     
 }

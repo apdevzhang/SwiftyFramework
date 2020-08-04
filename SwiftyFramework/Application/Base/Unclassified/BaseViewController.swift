@@ -19,28 +19,20 @@ class BaseViewController: UIViewController {
         }
     }
         
-    // refresh properities
-    
+    // Refresh properities
     let isLoading = BehaviorRelay(value: false)
     let headerRefreshTrigger = PublishSubject<Void>()
     let footerRefreshTrigger = PublishSubject<Void>()
     let isHeaderLoading = BehaviorRelay(value: false)
     let isFooterLoading = BehaviorRelay(value: false)
     /// 是否禁用刷新（用于不需要刷新的页面）
-    let disableRefreshTrigger = PublishSubject<Bool>()
+    let disableRefreshTrigger = PublishSubject<Bool>()    
     
-    // 统一在BaseTableView和BaseCollectionView处理分页请求最后一页情况
-    // 如果需要在不同页面单独处理底部文案或其他情况，那么在需要的页面不将ViewModel的`lastPageSubject`绑定基类的`isLastPageTrigger`
-    // 然后在需要的页面单独处理即可
-    let isLastPageTrigger = PublishSubject<Bool>()
-    
-    
-    // emptyDataSet properties
-    
-    var emptyDataSetTitle = ""
-    var emptyDataSetDescription = ""
+    // EmptyDataSet properties    
+    var emptyDataSetTitle = NSAttributedString(string: "")
+    var emptyDataSetDescription = NSAttributedString(string: "")
     var emptyDataSetImage = UIImage(named: "")
-    var emptyDataSetImageTintColor = BehaviorRelay<UIColor?>(value: nil)
+    var emptyDataSetImageTintColor: UIColor?
     let emptyDataSetViewTap = PublishSubject<Void>()
     
     
@@ -73,12 +65,6 @@ class BaseViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //        updateColorAppearance()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,7 +73,13 @@ class BaseViewController: UIViewController {
         view.backgroundColor = .white
         
         hero.isEnabled = true
-        
+    
+        /**
+         这边设想的是断网情况不仅仅出现在由`tableView`或是`collectionView`组成的基础页面上，
+         而UI断网提示页面可能会出现在各种不同的页面之上，
+         更好的业务处理是在有网情况下使用`EmptyDataSet`，断网的情况下使用自定义UI填充页面，待
+         网络重新连上的时候`remove`掉更好
+         */
         ReachabilityManager.shared.reach
             .subscribe(onNext: { [weak self] (boolValue) in
                 guard let self = self else { return }
@@ -132,21 +124,13 @@ class BaseViewController: UIViewController {
     
 }
 
-extension BaseViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        guard let count = self.navigationController?.viewControllers.count else { return false }
-        
-        return count > 1 ? true : false
-    }
-}
-
 extension BaseViewController: DZNEmptyDataSetSource {
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: emptyDataSetTitle)
+        return emptyDataSetTitle
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: emptyDataSetDescription)
+        return emptyDataSetDescription
     }
     
     func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
@@ -154,7 +138,7 @@ extension BaseViewController: DZNEmptyDataSetSource {
     }
     
     func imageTintColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
-        return emptyDataSetImageTintColor.value
+        return emptyDataSetImageTintColor
     }
     
     func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
