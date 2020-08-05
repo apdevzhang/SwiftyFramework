@@ -25,8 +25,6 @@ class BaseViewController: UIViewController {
     let footerRefreshTrigger = PublishSubject<Void>()
     let isHeaderLoading = BehaviorRelay(value: false)
     let isFooterLoading = BehaviorRelay(value: false)
-    /// 是否禁用刷新（用于不需要刷新的页面）
-    let disableRefreshTrigger = PublishSubject<Bool>()    
     
     // EmptyDataSet properties    
     var emptyDataSetTitle = NSAttributedString(string: "")

@@ -1,15 +1,5 @@
-//
-//  UserDefaultConfig.swift
-//  SwiftyFramework
-//
-//  Created by BANYAN on 2020/3/11.
-//  Copyright © 2020 BANYAN. All rights reserved.
-//
 
-struct UserDefaultConfig {
-    
-    // MARK: - 系统相关
-    
+struct UserDefaultConfig {    
     /// 是否第一次登录
     @UserDefault(key: "vrigin", defaultValue: false)
     static var vrigin: Bool
@@ -17,10 +7,25 @@ struct UserDefaultConfig {
     /// 登录成功标识
     @UserDefault(key: "success", defaultValue: false)
     static var success: Bool
+}
+
+
+@propertyWrapper
+struct UserDefault<T> {
+    let key: String
+    let defaultValue: T
     
-    // MARK: - 用户相关
+    var value: T {
+        get {
+            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: key)
+        }
+    }
     
-    /// 用户token
-    @UserDefault(key: "token", defaultValue: "")
-    static var token: String
+    var wrappedValue: T {
+      get { value }
+      set { value = newValue }
+    }
 }

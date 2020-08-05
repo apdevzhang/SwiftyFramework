@@ -6,24 +6,10 @@
 //  Copyright © 2020 BANYAN. All rights reserved.
 //
 
-enum Gender: Int, Codable {
-    case male, female, unkonw
-    
-    func description() -> String {
-        switch self {
-        case .male:
-            return "男"
-        case .female:
-            return "女"
-        case .unkonw:
-            return "未知"
-        }
-    }
-}
-
 struct UserData: Codable {
     var name: String?    
     var gender: Gender?
+    var userToken: String?
 }
 
 class UserDataManager {
@@ -44,6 +30,7 @@ class UserDataManager {
             return try! decodeUserData()
         }
     }
+    
     
     // MARK: - Public Methods
     
@@ -77,6 +64,7 @@ class UserDataManager {
             try! FileManager.default.removeItem(atPath: dataPath)
         }
     }
+    
     
     // MARK: - Private Methods
     private func userDataFilePath() -> URL {

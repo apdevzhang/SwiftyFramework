@@ -6,8 +6,6 @@
 //  Copyright © 2019 Apus. All rights reserved.
 //
 
-import UIKit
-
 struct OpenSDKConst {
     
     // MARK: - 微信

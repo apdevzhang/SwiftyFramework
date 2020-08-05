@@ -23,6 +23,7 @@ class BaseTextField: UITextField {
         if #available(iOS 12.0, *) {
             self.textContentType = .oneTimeCode
         }
+        
         self.autocapitalizationType = .none
         
         delegate = self

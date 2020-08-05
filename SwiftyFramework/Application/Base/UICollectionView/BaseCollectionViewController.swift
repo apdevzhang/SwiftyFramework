@@ -58,16 +58,6 @@ class BaseCollectionViewController: BaseViewController {
                 self.headerRefreshTrigger.onNext(())
             }).disposed(by: rx.disposeBag)
         
-        // 禁用刷新控件（在数据固定的页面使用）
-        disableRefreshTrigger.filter { (boolValue) -> Bool in
-            return true
-        }.subscribe(onNext: { [weak self] (_) in
-            guard let self = self else { return }
-            
-            self.collectionView.headRefreshControl = nil
-            self.collectionView.footRefreshControl = nil
-        }).disposed(by: rx.disposeBag)
-        
         // 处理分页到底部的情况
         isLastPageTrigger
             .subscribe(onNext: { [weak self] (isLast) in

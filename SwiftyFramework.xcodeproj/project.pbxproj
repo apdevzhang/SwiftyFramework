@@ -38,7 +38,6 @@
 		23A71A7B244468950045E56E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A71A7A244468950045E56E /* AuthManager.swift */; };
 		23A71A7D244468A70045E56E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A71A7C244468A70045E56E /* Application.swift */; };
 		23B61B512456DD0300E3792F /* UserCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B61B502456DD0300E3792F /* UserCodable.swift */; };
-		23B61B532456DD0800E3792F /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B61B522456DD0800E3792F /* UserAgent.swift */; };
 		23BCC9CF24205F9900F9EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCC9CE24205F9900F9EC79 /* AppDelegate.swift */; };
 		23BCC9D624205F9900F9EC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BCC9D424205F9900F9EC79 /* Main.storyboard */; };
 		23BCC9D824205F9A00F9EC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BCC9D724205F9A00F9EC79 /* Assets.xcassets */; };
@@ -63,7 +62,6 @@
 		23BCCA672420A03900F9EC79 /* OpenSDKConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA642420A03800F9EC79 /* OpenSDKConst.swift */; };
 		23BCCA682420A03900F9EC79 /* FontConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA652420A03800F9EC79 /* FontConst.swift */; };
 		23BCCA692420A03900F9EC79 /* ColorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA662420A03900F9EC79 /* ColorConst.swift */; };
-		23BCCA6C2420A07C00F9EC79 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA6A2420A07C00F9EC79 /* UserDefault.swift */; };
 		23BCCA6D2420A07C00F9EC79 /* UserDefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA6B2420A07C00F9EC79 /* UserDefaultConfig.swift */; };
 		23BCCA752420A08900F9EC79 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA6E2420A08900F9EC79 /* ReachabilityManager.swift */; };
 		23BCCA772420A08900F9EC79 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA702420A08900F9EC79 /* ErrorResponse.swift */; };
@@ -72,6 +70,10 @@
 		23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7D2420A0F100F9EC79 /* R.generated.swift */; };
 		23BCCA812420A17900F9EC79 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */; };
 		23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */; };
+		23F1819924DA996F0025BDB3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819824DA996F0025BDB3 /* Enums.swift */; };
+		23F1819B24DA9A260025BDB3 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819A24DA9A260025BDB3 /* Dimensions.swift */; };
+		23F1819D24DA9AAE0025BDB3 /* ApolloConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819C24DA9AAE0025BDB3 /* ApolloConst.swift */; };
+		23F181A224DA9C510025BDB3 /* Classes.md in Resources */ = {isa = PBXBuildFile; fileRef = 23F181A124DA9C510025BDB3 /* Classes.md */; };
 		24AD23677F428C6D0FD4EF69 /* Pods_SwiftyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2021D721B087497622846363 /* Pods_SwiftyFramework.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,7 +133,6 @@
 		23A71A83244469310045E56E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		23A71A84244469310045E56E /* Product.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Product.xcconfig; sourceTree = "<group>"; };
 		23B61B502456DD0300E3792F /* UserCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCodable.swift; sourceTree = "<group>"; };
-		23B61B522456DD0800E3792F /* UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
 		23BCC9CE24205F9900F9EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23BCC9D524205F9900F9EC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23BCC9D724205F9A00F9EC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,7 +160,6 @@
 		23BCCA642420A03800F9EC79 /* OpenSDKConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKConst.swift; sourceTree = "<group>"; };
 		23BCCA652420A03800F9EC79 /* FontConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontConst.swift; sourceTree = "<group>"; };
 		23BCCA662420A03900F9EC79 /* ColorConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConst.swift; sourceTree = "<group>"; };
-		23BCCA6A2420A07C00F9EC79 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		23BCCA6B2420A07C00F9EC79 /* UserDefaultConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultConfig.swift; sourceTree = "<group>"; };
 		23BCCA6E2420A08900F9EC79 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		23BCCA702420A08900F9EC79 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -171,6 +171,10 @@
 		23D1783B24BB3BE500A7EF16 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783C24BB3BE500A7EF16 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewMaster.swift; sourceTree = "<group>"; };
+		23F1819824DA996F0025BDB3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		23F1819A24DA9A260025BDB3 /* Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		23F1819C24DA9AAE0025BDB3 /* ApolloConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloConst.swift; sourceTree = "<group>"; };
+		23F181A124DA9C510025BDB3 /* Classes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Classes.md; sourceTree = "<group>"; };
 		3EB449CDDBCFEF6D263B9111 /* Pods-SwiftyFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFrameworkTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyFrameworkTests/Pods-SwiftyFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D37E902348C94A04E16F2AF /* Pods-SwiftyFramework.product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFramework.product.xcconfig"; path = "Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.product.xcconfig"; sourceTree = "<group>"; };
 		6D4B3497A1A6022A7A670977 /* Pods-SwiftyFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFramework.release.xcconfig"; path = "Target Support Files/Pods-SwiftyFramework/Pods-SwiftyFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +403,10 @@
 		23BCCA1624207F6D00F9EC79 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				23F181A124DA9C510025BDB3 /* Classes.md */,
+				23F1819F24DA9C360025BDB3 /* Unclassified */,
+				23F1819E24DA9C2D0025BDB3 /* ReuseUI */,
+				23F181A024DA9C3F0025BDB3 /* Authentication */,
 				230C723224758B5600091BF7 /* ViewController.swift */,
 			);
 			path = Classes;
@@ -479,9 +487,7 @@
 		23BCCA6124209FFD00F9EC79 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				23B61B522456DD0800E3792F /* UserAgent.swift */,
 				23B61B502456DD0300E3792F /* UserCodable.swift */,
-				23BCCA6A2420A07C00F9EC79 /* UserDefault.swift */,
 				23BCCA6B2420A07C00F9EC79 /* UserDefaultConfig.swift */,
 			);
 			path = Database;
@@ -490,6 +496,7 @@
 		23BCCA6224209FFF00F9EC79 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				23F1819824DA996F0025BDB3 /* Enums.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -500,8 +507,31 @@
 				23BCCA662420A03900F9EC79 /* ColorConst.swift */,
 				23BCCA652420A03800F9EC79 /* FontConst.swift */,
 				23BCCA642420A03800F9EC79 /* OpenSDKConst.swift */,
+				23F1819A24DA9A260025BDB3 /* Dimensions.swift */,
+				23F1819C24DA9AAE0025BDB3 /* ApolloConst.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		23F1819E24DA9C2D0025BDB3 /* ReuseUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReuseUI;
+			sourceTree = "<group>";
+		};
+		23F1819F24DA9C360025BDB3 /* Unclassified */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unclassified;
+			sourceTree = "<group>";
+		};
+		23F181A024DA9C3F0025BDB3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		633A13E5E3CDA3B949EB77BF /* Frameworks */ = {
@@ -635,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BCCA0D242076A200F9EC79 /* OFL.txt in Resources */,
+				23F181A224DA9C510025BDB3 /* Classes.md in Resources */,
 				23BCCA0A242076A200F9EC79 /* NotoSerifSC-Bold.otf in Resources */,
 				23BCCA0E242076A200F9EC79 /* NotoSerifSC-SemiBold.otf in Resources */,
 				23BCC9DB24205F9A00F9EC79 /* LaunchScreen.storyboard in Resources */,
@@ -756,7 +787,6 @@
 				230C722E2475889D00091BF7 /* BaseTextView.swift in Sources */,
 				230C721B2475877F00091BF7 /* BaseCollectionReusableView.swift in Sources */,
 				23BCCA772420A08900F9EC79 /* ErrorResponse.swift in Sources */,
-				23B61B532456DD0800E3792F /* UserAgent.swift in Sources */,
 				236E7BB92420C8B400717A4A /* NetworkingPluginType.swift in Sources */,
 				230C72102475875A00091BF7 /* BaseViewModel.swift in Sources */,
 				230C72122475875A00091BF7 /* BaseTextField.swift in Sources */,
@@ -779,8 +809,10 @@
 				23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */,
 				230C722C2475880D00091BF7 /* BaseButton.swift in Sources */,
 				23BCCA4424209EF700F9EC79 /* ErrorTracker.swift in Sources */,
+				23F1819D24DA9AAE0025BDB3 /* ApolloConst.swift in Sources */,
 				23BCCA4524209EF700F9EC79 /* KafkaRefresh+Rx.swift in Sources */,
 				23BCCA752420A08900F9EC79 /* ReachabilityManager.swift in Sources */,
+				23F1819B24DA9A260025BDB3 /* Dimensions.swift in Sources */,
 				23B61B512456DD0300E3792F /* UserCodable.swift in Sources */,
 				23BCCA4624209EF700F9EC79 /* Observable+Operators.swift in Sources */,
 				23BCCA4324209EF700F9EC79 /* Hero+Rx.swift in Sources */,
@@ -795,9 +827,9 @@
 				230C72162475877800091BF7 /* BaseWebViewController.swift in Sources */,
 				236E7BB82420C8B400717A4A /* Networking.swift in Sources */,
 				230C721C2475877F00091BF7 /* BaseCollectionViewCell.swift in Sources */,
+				23F1819924DA996F0025BDB3 /* Enums.swift in Sources */,
 				23BCCA3624209EC400F9EC79 /* AppearanceState.swift in Sources */,
 				23BCCA4224209EF700F9EC79 /* ActivityIndicator.swift in Sources */,
-				23BCCA6C2420A07C00F9EC79 /* UserDefault.swift in Sources */,
 				23BCCA6D2420A07C00F9EC79 /* UserDefaultConfig.swift in Sources */,
 				23A71A7D244468A70045E56E /* Application.swift in Sources */,
 				23BCCA812420A17900F9EC79 /* AuthenticationAPI.swift in Sources */,

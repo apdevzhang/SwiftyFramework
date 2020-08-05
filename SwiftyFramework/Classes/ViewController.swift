@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  SwiftyFramework
-//
-//  Created by BANYAN on 2020/5/20.
-//  Copyright © 2020 BANYAN. All rights reserved.
-//
+//  test
 
 class ViewController: BaseViewController {
     
