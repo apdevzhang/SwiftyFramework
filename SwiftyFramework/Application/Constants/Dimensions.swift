@@ -24,7 +24,7 @@ struct Dimensions {
     
     static let bottomAreaHeight: CGFloat = isIphoneX ? 34.0 : 0
     
-    ///iPhone X状态栏比iPhone8多出的部分
+    /// iPhone X状态栏比iPhone8多出的部分
     static let topDiffHeight = statusBarHeight-20
 }
 

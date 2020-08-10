@@ -57,3 +57,15 @@ extension String {
         }
     }
 }
+
+extension String {
+    func toFloat() -> Float? {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.floatValue
+    }
+    
+    func toDouble() -> Double? {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.doubleValue
+    }
+}

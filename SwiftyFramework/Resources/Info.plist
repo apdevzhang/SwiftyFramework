@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APP_VERSION</key>
+	<string>$(APP_VERSION)</string>
+	<key>APP_BUILD_VERSION</key>
+	<string>$(APP_BUILD_VERSION)</string>
 	<key>APP_BASE_URL</key>
 	<string>$(APP_BASE_URL)</string>
 	<key>CFBundleDevelopmentRegion</key>

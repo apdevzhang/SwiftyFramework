@@ -7,9 +7,9 @@
 //
 
 struct UserData: Codable {
-    var name: String?    
-    var gender: Gender?
+    var name: String?
     var userToken: String?
+    var gender: Gender = .secret
 }
 
 class UserDataManager {

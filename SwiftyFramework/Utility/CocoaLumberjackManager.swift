@@ -6,6 +6,7 @@
 import CocoaLumberjack
 
 class CocoaLumberjackManager: NSObject {
+    
     static let shared = CocoaLumberjackManager()
     
     /// 配置`CocoaLumberjack`
@@ -24,6 +25,7 @@ class CocoaLumberjackManager: NSObject {
         fileLogger.rollingFrequency = TimeInterval(60 * 60 * 24)  // 24 hours
         fileLogger.logFileManager.maximumNumberOfLogFiles = 7
     }
+    
 }
 
 class CocoaLumberjackLogFormatter: DDDispatchQueueLogFormatter {
@@ -61,4 +63,5 @@ class CocoaLumberjackLogFormatter: DDDispatchQueueLogFormatter {
         x.formatterBehavior = .behavior10_4
         x.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
+    
 }

@@ -6,8 +6,6 @@
 //  Copyright © 2019 k-lpmg. All rights reserved.
 //
 
-import RxSwift
-
 class BaseCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties

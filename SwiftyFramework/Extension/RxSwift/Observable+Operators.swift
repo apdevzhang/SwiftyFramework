@@ -6,7 +6,6 @@
 //  Copyright © 2016 Khoren Markosyan. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
 

@@ -66,8 +66,11 @@ class BaseViewModel: NSObject {
             }).disposed(by: rx.disposeBag)
         
         errorResponse
-            .subscribe(onNext: { (errorResponse) in
+            .subscribe(onNext: { [weak self] (errorResponse) in
                 DDLogError("\(String(describing: errorResponse.message))")
+//                let title = errorResponse.message ?? ""
+//                let image = UIImage(named: "")
+//                tableView、collectionView emptyDataSet
             }).disposed(by: rx.disposeBag)
     }
     

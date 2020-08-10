@@ -17,10 +17,18 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
+    /// Resource file `Classes.md`.
+    static let classesMd = Rswift.FileResource(bundle: R.hostingBundle, name: "Classes", pathExtension: "md")
     /// Resource file `OFL.txt`.
     static let oflTxt = Rswift.FileResource(bundle: R.hostingBundle, name: "OFL", pathExtension: "txt")
+    
+    /// `bundle.url(forResource: "Classes", withExtension: "md")`
+    static func classesMd(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.classesMd
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "OFL", withExtension: "txt")`
     static func oflTxt(_: Void = ()) -> Foundation.URL? {
