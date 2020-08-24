@@ -36,6 +36,7 @@
 		2381A8B924D2BF760097A06E /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8B624D2BF760097A06E /* UIApplication+Rx.swift */; };
 		2381A8BB24D2BF960097A06E /* RxKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381A8BA24D2BF960097A06E /* RxKeyboard.swift */; };
 		23A71A7D244468A70045E56E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A71A7C244468A70045E56E /* Application.swift */; };
+		23ADF5E424F3AD0A001A3A1E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADF5E324F3AD0A001A3A1E /* UIView+Extension.swift */; };
 		23B61B512456DD0300E3792F /* UserCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B61B502456DD0300E3792F /* UserCodable.swift */; };
 		23BCC9CF24205F9900F9EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCC9CE24205F9900F9EC79 /* AppDelegate.swift */; };
 		23BCC9D624205F9900F9EC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BCC9D424205F9900F9EC79 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		23BCCA7B2420A08900F9EC79 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA742420A08900F9EC79 /* BaseModel.swift */; };
 		23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7D2420A0F100F9EC79 /* R.generated.swift */; };
 		23BCCA812420A17900F9EC79 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */; };
+		23E952C224E14EE100012988 /* EmptyDataSetOffNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E952C124E14EE100012988 /* EmptyDataSetOffNetworkView.swift */; };
 		23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */; };
 		23F1819924DA996F0025BDB3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819824DA996F0025BDB3 /* Enums.swift */; };
 		23F1819B24DA9A260025BDB3 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819A24DA9A260025BDB3 /* Dimensions.swift */; };
@@ -137,6 +139,7 @@
 		23A71A82244469310045E56E /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		23A71A83244469310045E56E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		23A71A84244469310045E56E /* Product.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Product.xcconfig; sourceTree = "<group>"; };
+		23ADF5E324F3AD0A001A3A1E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		23B61B502456DD0300E3792F /* UserCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCodable.swift; sourceTree = "<group>"; };
 		23BCC9CE24205F9900F9EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23BCC9D524205F9900F9EC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		23D1783A24BB3BE500A7EF16 /* SwiftyFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783B24BB3BE500A7EF16 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783C24BB3BE500A7EF16 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23E952C124E14EE100012988 /* EmptyDataSetOffNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetOffNetworkView.swift; sourceTree = "<group>"; };
 		23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewMaster.swift; sourceTree = "<group>"; };
 		23F1819824DA996F0025BDB3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		23F1819A24DA9A260025BDB3 /* Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
@@ -416,6 +420,7 @@
 				23F181A724DBAAE00025BDB3 /* UIApplication-Extensions.swift */,
 				23F181A924DBAAF30025BDB3 /* UISearchBar-Extensions.swift */,
 				23F181AB24DBAB0A0025BDB3 /* UINavigationBar-Extensions.swift */,
+				23ADF5E324F3AD0A001A3A1E /* UIView+Extension.swift */,
 				23BCCA3A24209EEB00F9EC79 /* RxSwift */,
 			);
 			path = Extension;
@@ -538,6 +543,7 @@
 		23F1819E24DA9C2D0025BDB3 /* ReuseUI */ = {
 			isa = PBXGroup;
 			children = (
+				23E952C124E14EE100012988 /* EmptyDataSetOffNetworkView.swift */,
 			);
 			path = ReuseUI;
 			sourceTree = "<group>";
@@ -820,6 +826,7 @@
 				23BCCA792420A08900F9EC79 /* BaseAPI.swift in Sources */,
 				23BCC9CF24205F9900F9EC79 /* AppDelegate.swift in Sources */,
 				23BCCA3724209EC400F9EC79 /* GlobalFunctions.swift in Sources */,
+				23ADF5E424F3AD0A001A3A1E /* UIView+Extension.swift in Sources */,
 				230C72232475878400091BF7 /* BaseTableViewHeaderFooterView.swift in Sources */,
 				230C72222475878400091BF7 /* BaseTableViewCell.swift in Sources */,
 				236E7BBB2420C8B400717A4A /* NetworkingType.swift in Sources */,
@@ -833,6 +840,7 @@
 				23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */,
 				230C722C2475880D00091BF7 /* BaseButton.swift in Sources */,
 				23BCCA4424209EF700F9EC79 /* ErrorTracker.swift in Sources */,
+				23E952C224E14EE100012988 /* EmptyDataSetOffNetworkView.swift in Sources */,
 				23F1819D24DA9AAE0025BDB3 /* ApolloConst.swift in Sources */,
 				23BCCA4524209EF700F9EC79 /* KafkaRefresh+Rx.swift in Sources */,
 				23BCCA752420A08900F9EC79 /* ReachabilityManager.swift in Sources */,

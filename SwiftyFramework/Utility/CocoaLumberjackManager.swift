@@ -28,6 +28,7 @@ class CocoaLumberjackManager: NSObject {
     
 }
 
+
 class CocoaLumberjackLogFormatter: DDDispatchQueueLogFormatter {
         
     private func formatterLogFlag(message logMessage: DDLogMessage) -> String {

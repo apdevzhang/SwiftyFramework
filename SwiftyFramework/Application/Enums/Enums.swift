@@ -7,6 +7,7 @@ enum ScreenOrientation {
 
 /// 性别
 enum Gender: Int, Codable {
+    
     case male, female, secret
     
     var stringValue: String {
@@ -30,4 +31,5 @@ enum Gender: Int, Codable {
             return 2
         }
     }
+    
 }
