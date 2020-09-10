@@ -129,6 +129,7 @@
 		236E7BB62420C8B400717A4A /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		236E7BB72420C8B400717A4A /* NetworkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingType.swift; sourceTree = "<group>"; };
 		236E7BBE2420C8E900717A4A /* RxEventHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxEventHub.swift; sourceTree = "<group>"; };
+		2377BAA7250A162B00C883BB /* SwiftyFramework-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftyFramework-Bridging-Header.h"; sourceTree = "<group>"; };
 		2381A8B024D2B4750097A06E /* Rx.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Rx.md; sourceTree = "<group>"; };
 		2381A8B424D2BF760097A06E /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Rx.swift"; sourceTree = "<group>"; };
 		2381A8B524D2BF760097A06E /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		23BCCA06242076A200F9EC79 /* NotoSerifSC-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Medium.otf"; sourceTree = "<group>"; };
 		23BCCA07242076A200F9EC79 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		23BCCA08242076A200F9EC79 /* NotoSerifSC-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-SemiBold.otf"; sourceTree = "<group>"; };
-		23BCCA1024207A9900F9EC79 /* SwiftyFramework-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftyFramework-Bridging-Header.h"; sourceTree = "<group>"; };
 		23BCCA3024209EC400F9EC79 /* RxEventHubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxEventHubProvider.swift; sourceTree = "<group>"; };
 		23BCCA3124209EC400F9EC79 /* CocoaLumberjackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackManager.swift; sourceTree = "<group>"; };
 		23BCCA3224209EC400F9EC79 /* AppearanceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceState.swift; sourceTree = "<group>"; };
@@ -348,7 +348,7 @@
 				23BCC9D724205F9A00F9EC79 /* Assets.xcassets */,
 				23BCC9D924205F9A00F9EC79 /* LaunchScreen.storyboard */,
 				23BCC9DC24205F9A00F9EC79 /* Info.plist */,
-				23BCCA1024207A9900F9EC79 /* SwiftyFramework-Bridging-Header.h */,
+				2377BAA7250A162B00C883BB /* SwiftyFramework-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -380,8 +380,6 @@
 				23BCCA3324209EC400F9EC79 /* GlobalFunctions.swift */,
 				23BCCA3024209EC400F9EC79 /* RxEventHubProvider.swift */,
 				23BCCA3124209EC400F9EC79 /* CocoaLumberjackManager.swift */,
-				23F181B024E125880025BDB3 /* CustomKafkaRefreshHeader.swift */,
-				23F181B224E125A30025BDB3 /* CustomKafkaRefreshFooter.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -487,6 +485,8 @@
 		23BCCA4B24209F8000F9EC79 /* Unclassified */ = {
 			isa = PBXGroup;
 			children = (
+				23F181B024E125880025BDB3 /* CustomKafkaRefreshHeader.swift */,
+				23F181B224E125A30025BDB3 /* CustomKafkaRefreshFooter.swift */,
 				230C720C2475875A00091BF7 /* BaseNavigationController.swift */,
 				230C720A2475875A00091BF7 /* BaseViewController.swift */,
 				230C720B2475875A00091BF7 /* BaseViewModel.swift */,

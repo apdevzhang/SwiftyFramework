@@ -12,7 +12,6 @@ target 'SwiftyFramework' do
   pod 'RxCocoa', '~> 5.0'
   pod 'RxSwiftExt', '~> 5.0'                # https://github.com/RxSwiftCommunity/RxSwiftExt
   pod 'NSObject+Rx', '~> 5.0'               # https://github.com/RxSwiftCommunity/NSObject-Rx
-  pod 'RxFlow', '2.8.0'                     # https://github.com/RxSwiftCommunity/RxFlow
   pod 'RxDataSources', '~> 4.0'             # https://github.com/RxSwiftCommunity/RxDataSources
   pod 'RxGesture', '~> 3.0'                 # https://github.com/RxSwiftCommunity/RxGesture
   pod 'RxWebKit', '~> 1.0'                  # https://github.com/RxSwiftCommunity/RxWebKit
