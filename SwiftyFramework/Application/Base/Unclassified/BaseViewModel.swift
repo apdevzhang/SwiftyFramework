@@ -31,7 +31,7 @@ class BaseViewModel: NSObject {
     /// 初始化分页
     var currentPage = 1
     
-    /// 分页总数
+    /// 分页总数(数据未返回时代替值)
     var totalPage = 1
     
     /// 单次分页条数

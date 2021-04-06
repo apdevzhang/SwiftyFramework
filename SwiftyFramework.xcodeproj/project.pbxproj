@@ -67,8 +67,8 @@
 		23BCCA772420A08900F9EC79 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA702420A08900F9EC79 /* ErrorResponse.swift */; };
 		23BCCA792420A08900F9EC79 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA722420A08900F9EC79 /* BaseAPI.swift */; };
 		23BCCA7B2420A08900F9EC79 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA742420A08900F9EC79 /* BaseModel.swift */; };
-		23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7D2420A0F100F9EC79 /* R.generated.swift */; };
 		23BCCA812420A17900F9EC79 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */; };
+		23C39A15261CC2F500FFD46D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C39A14261CC2F500FFD46D /* R.generated.swift */; };
 		23E952C224E14EE100012988 /* EmptyDataSetOffNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E952C124E14EE100012988 /* EmptyDataSetOffNetworkView.swift */; };
 		23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819324D7EDE60025BDB3 /* TextViewMaster.swift */; };
 		23F1819924DA996F0025BDB3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1819824DA996F0025BDB3 /* Enums.swift */; };
@@ -173,8 +173,8 @@
 		23BCCA702420A08900F9EC79 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		23BCCA722420A08900F9EC79 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		23BCCA742420A08900F9EC79 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		23BCCA7D2420A0F100F9EC79 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		23BCCA7F2420A17800F9EC79 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
+		23C39A14261CC2F500FFD46D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		23D1783A24BB3BE500A7EF16 /* SwiftyFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783B24BB3BE500A7EF16 /* SwiftyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D1783C24BB3BE500A7EF16 /* SwiftyFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,7 +341,7 @@
 		23BCC9FE24205FA100F9EC79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				23BCCA7D2420A0F100F9EC79 /* R.generated.swift */,
+				23C39A14261CC2F500FFD46D /* R.generated.swift */,
 				23A71A80244469310045E56E /* Config */,
 				23BCCA02242076A200F9EC79 /* Fonts */,
 				23BCC9D424205F9900F9EC79 /* Main.storyboard */,
@@ -597,6 +597,7 @@
 				23BCC9C824205F9900F9EC79 /* Frameworks */,
 				23BCC9C924205F9900F9EC79 /* Resources */,
 				8AEEF083A95E6AAA48E5799C /* [CP] Embed Pods Frameworks */,
+				23C39A0F261CBE8300FFD46D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -734,11 +735,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/SwiftyFramework/Resources/R.generated.swift,
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/SwiftyFramework/Resources/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		23C39A0F261CBE8300FFD46D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 		8AEEF083A95E6AAA48E5799C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -831,11 +849,11 @@
 				230C72222475878400091BF7 /* BaseTableViewCell.swift in Sources */,
 				236E7BBB2420C8B400717A4A /* NetworkingType.swift in Sources */,
 				23BCCA7B2420A08900F9EC79 /* BaseModel.swift in Sources */,
-				23BCCA7E2420A0F100F9EC79 /* R.generated.swift in Sources */,
 				23BCCA672420A03900F9EC79 /* OpenSDKConst.swift in Sources */,
 				23BCCA3424209EC400F9EC79 /* RxEventHubProvider.swift in Sources */,
 				230C72112475875A00091BF7 /* BaseNavigationController.swift in Sources */,
 				23F181B324E125A30025BDB3 /* CustomKafkaRefreshFooter.swift in Sources */,
+				23C39A15261CC2F500FFD46D /* R.generated.swift in Sources */,
 				23BCCA3524209EC400F9EC79 /* CocoaLumberjackManager.swift in Sources */,
 				23F1819424D7EDE60025BDB3 /* TextViewMaster.swift in Sources */,
 				230C722C2475880D00091BF7 /* BaseButton.swift in Sources */,
@@ -980,7 +998,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCT;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Product;
@@ -1000,6 +1018,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftyFramework/Resources/SwiftyFramework-Bridging-Header.h";
@@ -1160,6 +1179,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -1181,6 +1201,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftyFramework/Resources/SwiftyFramework-Bridging-Header.h";
@@ -1204,6 +1225,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftyFramework/Resources/SwiftyFramework-Bridging-Header.h";

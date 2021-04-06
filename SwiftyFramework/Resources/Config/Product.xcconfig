@@ -15,5 +15,3 @@ BUNDLE_IDENTIFIER = com.Better.SwiftyFramework.product
 /// APP Icon
 APP_ICON = AppIconProduct
 
-/// API
-APP_BASE_URL = "http://app.swifty.product.cn"

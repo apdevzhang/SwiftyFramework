@@ -14,5 +14,3 @@ BUNDLE_IDENTIFIER = com.Better.SwiftyFramework.debug
 /// APP Icon
 APP_ICON = AppIconDebug
 
-/// API
-APP_BASE_URL = http:\/\/app.swifty.debug.cn

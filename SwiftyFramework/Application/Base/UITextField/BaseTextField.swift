@@ -10,7 +10,7 @@ class BaseTextField: UITextField {
     
     // MARK: - Properties
     
-    /// 最大输入长度
+    /// 最大输入长度限制
     var maxLength: Int?
     
     

@@ -9,15 +9,20 @@
 struct BaseAPI {
     
     static var baseURL: URL {
-        let baseURL = URL(string: (Bundle.main.infoDictionary!["APP_BASE_URL"] as! String).replacingOccurrences(of: "\\", with: ""))!
-        return baseURL
+        #if DEBUG
+            return URL(string: "http://app.swifty.debug.cn")!
+        #elseif PRODUCT
+            return URL(string: "http://app.swifty.product.cn")!
+        #else
+            return URL(string: "http://app.swifty.release.cn")!
+        #endif
     }
     
     static var headers: [String: String]? {
         var headers = Dictionary<String, String>()
         headers["Content-Type"] = "application/json"
         headers["app-version"] = RxAppState.currentAppVersion
-//        headers["access-token"] = UserDataManager.shared.user.accessToken
+        //        headers["access-token"] = UserDataManager.shared.user.accessToken
         return headers
     }
     

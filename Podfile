@@ -47,11 +47,14 @@ target 'SwiftyFramework' do
   # Code Quality
   pod 'Then'                                 # https://github.com/devxoul/Then
   pod 'SwifterSwift', '~> 5.0'               # https://github.com/SwifterSwift/SwifterSwift
-  pod 'R.swift', '~> 5.0.0'                  # https://github.com/mac-cain13/R.swift
   pod 'DeviceKit', '~> 2.0'                  # https://github.com/devicekit/DeviceKit
+
   
   # Social
   pod 'MonkeyKing', '~> 1.16.0'              # https://github.com/nixzhu/MonkeyKing
+  
+  pod 'R.swift', '~> 5.0.0'                  # https://github.com/mac-cain13/R.swift
+  
 end
 
 target 'SwiftyFrameworkTests' do
