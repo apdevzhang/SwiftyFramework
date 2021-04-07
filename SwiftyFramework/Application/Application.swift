@@ -12,19 +12,19 @@ import KafkaRefresh
 import Kingfisher
 
 class Application: NSObject {
-
+    
     static let `default` = Application()
     
     // MARK: - Properties
     
-    var reachability: Reachability?
+    var reachability: Reachability! = try? Reachability()
     
     
     // MARK: - Public Methods
     
     func configutation() {
-        reachability = Reachability()
-        try? reachability?.startNotifier()
+        
+        try? reachability.startNotifier()
         
         setupKeyboardManager()
         
@@ -84,7 +84,7 @@ extension Application {
 extension Application {
     func clearDataPersistence() {
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-
+        
         let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         if FileManager.default.fileExists(atPath: filePath.path) {
             try! FileManager.default.removeItem(atPath: filePath.path)

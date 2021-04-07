@@ -7,7 +7,7 @@ target 'SwiftyFramework' do
   use_frameworks!
   inhibit_all_warnings!
   
-  # Rx
+  # Rx 受限于Moya暂时未更新至6.1.0
   pod 'RxSwift', '~> 5.0'                   # https://github.com/ReactiveX/RxSwift
   pod 'RxCocoa', '~> 5.0'
   pod 'RxSwiftExt', '~> 5.0'                # https://github.com/RxSwiftCommunity/RxSwiftExt
@@ -15,22 +15,20 @@ target 'SwiftyFramework' do
   pod 'RxDataSources', '~> 4.0'             # https://github.com/RxSwiftCommunity/RxDataSources
   pod 'RxGesture', '~> 3.0'                 # https://github.com/RxSwiftCommunity/RxGesture
   pod 'RxWebKit', '~> 1.0'                  # https://github.com/RxSwiftCommunity/RxWebKit
-  pod 'RxReachability'                      # https://github.com/RxSwiftCommunity/RxReachability
-  
+  pod 'RxReachability', '1.1.0'                      # https://github.com/RxSwiftCommunity/RxReachability
   
   # Networking
-  pod 'Alamofire', '~> 5.0.0-rc.2'          # https://github.com/Alamofire/Alamofire
-  pod 'Moya/RxSwift', '14.0.0-beta.2'       # https://github.com/Moya/Moya
+  pod 'Alamofire', '5.4.2'          # https://github.com/Alamofire/Alamofire
+  pod 'Moya/RxSwift', '14.0'       # https://github.com/Moya/Moya
   pod 'MoyaSugar/RxSwift'                   # https://github.com/devxoul/MoyaSugar
   
   
   # JSON
-  #‘Moya-ObjectMapper/RxSwift’依赖‘Moya/RxSwift版本14.0.0-beta.2’，需要先行安装后者
-  pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/khoren93/Moya-ObjectMapper.git', :branch => 'moya14'                   # https://github.com/ivanbruel/Moya-ObjectMapper
+  pod 'Moya-ObjectMapper/RxSwift'   # https://github.com/bmoliveira/Moya-ObjectMapper
 
   
   # 日志
-  pod 'CocoaLumberjack/Swift', '~> 3.6.0'      # https://github.com/CocoaLumberjack/CocoaLumberjack
+  pod 'CocoaLumberjack/Swift', '3.6.0'      # https://github.com/CocoaLumberjack/CocoaLumberjack
   
   
   # UI
@@ -48,12 +46,10 @@ target 'SwiftyFramework' do
   pod 'Then'                                 # https://github.com/devxoul/Then
   pod 'SwifterSwift', '~> 5.0'               # https://github.com/SwifterSwift/SwifterSwift
   pod 'DeviceKit', '~> 2.0'                  # https://github.com/devicekit/DeviceKit
-
+  pod 'R.swift', '~> 5.0.0'                  # https://github.com/mac-cain13/R.swift
   
   # Social
   pod 'MonkeyKing', '~> 1.16.0'              # https://github.com/nixzhu/MonkeyKing
-  
-  pod 'R.swift', '~> 5.0.0'                  # https://github.com/mac-cain13/R.swift
   
 end
 
@@ -61,7 +57,7 @@ target 'SwiftyFrameworkTests' do
   pod 'Quick', '~> 2.0'  # https://github.com/Quick/Quick
   pod 'Nimble', '~> 8.0'  # https://github.com/Quick/Nimble
   pod 'RxAtomic', :modular_headers => true
-  pod 'RxBlocking'  # https://github.com/ReactiveX/RxSwift
+  pod 'RxBlocking', '~> 5.0'  # https://github.com/ReactiveX/RxSwift
 end
 
 post_install do |installer|

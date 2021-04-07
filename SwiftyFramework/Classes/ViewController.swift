@@ -26,6 +26,13 @@ class ViewController: BaseViewController {
         #else
             DDLogInfo("release~~~")
         #endif
+        
+        // 真机测试
+        Reachability.rx.status
+            .subscribe(onNext: { (status: Reachability.Connection) in
+                DDLogInfo("网络状态: \(status)")
+              })
+            .disposed(by: rx.disposeBag)
     }
     
     override func emptyDataSetOffNetwork() {

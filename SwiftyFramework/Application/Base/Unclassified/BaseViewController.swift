@@ -79,9 +79,8 @@ class BaseViewController: UIViewController {
          网络重新连上的时候`remove`掉更好
          */
         ReachabilityManager.shared.reach
-            .subscribe(onNext: { [weak self] (boolValue) in
+            .subscribe(onNext: { [weak self] (boolValue: Bool) in
                 guard let self = self else { return }
-                
                 boolValue == true ? self.emptyDataSetNetworkOnline() : self.emptyDataSetOffNetwork()
             }).disposed(by: rx.disposeBag)
         
