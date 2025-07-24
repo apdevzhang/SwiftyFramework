@@ -1,0 +1,252 @@
+PODS:
+  - Alamofire (5.10.2)
+  - CocoaLumberjack/Core (3.8.5)
+  - CocoaLumberjack/Swift (3.8.5):
+    - CocoaLumberjack/Core
+  - DateToolsSwift (5.0.0)
+  - DeviceKit (5.6.0)
+  - Differentiator (5.0.0)
+  - DZNEmptyDataSet (1.8.1)
+  - FSPagerView (0.8.3)
+  - Hero (1.6.4)
+  - IQKeyboardManagerSwift (6.5.16)
+  - KafkaRefresh (1.7.0):
+    - KafkaRefresh/Category (= 1.7.0)
+    - KafkaRefresh/Configuration (= 1.7.0)
+    - KafkaRefresh/Core (= 1.7.0)
+    - KafkaRefresh/Default (= 1.7.0)
+    - KafkaRefresh/Style (= 1.7.0)
+    - KafkaRefresh/UIKit (= 1.7.0)
+  - KafkaRefresh/Category (1.7.0)
+  - KafkaRefresh/Configuration (1.7.0):
+    - KafkaRefresh/UIKit/FootKit
+    - KafkaRefresh/UIKit/HeadKit
+  - KafkaRefresh/Core (1.7.0):
+    - KafkaRefresh/Category
+  - KafkaRefresh/Default (1.7.0):
+    - KafkaRefresh/Style
+  - KafkaRefresh/Style (1.7.0)
+  - KafkaRefresh/UIKit (1.7.0):
+    - KafkaRefresh/UIKit/FootKit (= 1.7.0)
+    - KafkaRefresh/UIKit/HeadKit (= 1.7.0)
+    - KafkaRefresh/UIKit/LayerKit (= 1.7.0)
+  - KafkaRefresh/UIKit/FootKit (1.7.0):
+    - KafkaRefresh/Category
+    - KafkaRefresh/Core
+    - KafkaRefresh/Default
+    - KafkaRefresh/Style
+    - KafkaRefresh/UIKit/LayerKit
+  - KafkaRefresh/UIKit/HeadKit (1.7.0):
+    - KafkaRefresh/Category
+    - KafkaRefresh/Core
+    - KafkaRefresh/Default
+    - KafkaRefresh/Style
+    - KafkaRefresh/UIKit/LayerKit
+  - KafkaRefresh/UIKit/LayerKit (1.7.0):
+    - KafkaRefresh/Category
+    - KafkaRefresh/Default
+  - Kingfisher (8.5.0)
+  - MonkeyKing (2.2.1)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya-ObjectMapper/Core (2.9):
+    - Moya (~> 15.0.0)
+    - ObjectMapper
+  - Moya-ObjectMapper/RxSwift (2.9):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - MoyaSugar/Core (1.3.3):
+    - Moya (>= 14.0.0-beta.2)
+  - MoyaSugar/RxSwift (1.3.3):
+    - Moya/RxSwift (>= 14.0.0-beta.2)
+    - MoyaSugar/Core
+    - RxSwift (>= 5.0.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - NVActivityIndicatorView (5.2.0):
+    - NVActivityIndicatorView/Base (= 5.2.0)
+  - NVActivityIndicatorView/Base (5.2.0)
+  - ObjectMapper (4.4.2)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - ReachabilitySwift (5.2.4)
+  - RxAlertController (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.4):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxSwiftExt (6.2.1):
+    - RxSwiftExt/Core (= 6.2.1)
+    - RxSwiftExt/RxCocoa (= 6.2.1)
+  - RxSwiftExt/Core (6.2.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.2.1):
+    - RxCocoa (~> 6.0)
+    - RxSwiftExt/Core
+  - RxTheme (6.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - SnapKit (5.7.1)
+  - SwiftDate (7.0.0)
+  - SwifterSwift (5.2.0):
+    - SwifterSwift/AppKit (= 5.2.0)
+    - SwifterSwift/CoreAnimation (= 5.2.0)
+    - SwifterSwift/CoreGraphics (= 5.2.0)
+    - SwifterSwift/CoreLocation (= 5.2.0)
+    - SwifterSwift/Dispatch (= 5.2.0)
+    - SwifterSwift/Foundation (= 5.2.0)
+    - SwifterSwift/MapKit (= 5.2.0)
+    - SwifterSwift/SceneKit (= 5.2.0)
+    - SwifterSwift/SpriteKit (= 5.2.0)
+    - SwifterSwift/StoreKit (= 5.2.0)
+    - SwifterSwift/SwiftStdlib (= 5.2.0)
+    - SwifterSwift/UIKit (= 5.2.0)
+  - SwifterSwift/AppKit (5.2.0)
+  - SwifterSwift/CoreAnimation (5.2.0)
+  - SwifterSwift/CoreGraphics (5.2.0)
+  - SwifterSwift/CoreLocation (5.2.0)
+  - SwifterSwift/Dispatch (5.2.0)
+  - SwifterSwift/Foundation (5.2.0)
+  - SwifterSwift/MapKit (5.2.0)
+  - SwifterSwift/SceneKit (5.2.0)
+  - SwifterSwift/SpriteKit (5.2.0)
+  - SwifterSwift/StoreKit (5.2.0)
+  - SwifterSwift/SwiftStdlib (5.2.0)
+  - SwifterSwift/UIKit (5.2.0)
+  - Then (3.0.0)
+  - Toast-Swift (5.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.10.0)
+  - CocoaLumberjack/Swift (= 3.8.5)
+  - DateToolsSwift (= 5.0.0)
+  - DeviceKit (~> 5.2)
+  - DZNEmptyDataSet (~> 1.8.1)
+  - FSPagerView (~> 0.8.3)
+  - Hero (~> 1.6.4)
+  - IQKeyboardManagerSwift (= 6.5.16)
+  - KafkaRefresh (~> 1.7.0)
+  - Kingfisher (= 8.5.0)
+  - MonkeyKing (= 2.2.1)
+  - Moya-ObjectMapper/RxSwift (from `https://github.com/p-rob/Moya-ObjectMapper.git`, branch `master`)
+  - Moya/RxSwift (= 15.0)
+  - MoyaSugar/RxSwift (= 1.3.3)
+  - "NSObject+Rx (= 5.2.2)"
+  - NVActivityIndicatorView (~> 5.2.0)
+  - R.swift (= 5.0.3)
+  - ReachabilitySwift (= 5.2.4)
+  - RxAlertController (= 6.0.1)
+  - RxCocoa (= 6.5.0)
+  - RxDataSources (= 5.0.0)
+  - RxGesture (= 4.0.4)
+  - RxSwift (= 6.5.0)
+  - RxSwiftExt (= 6.2.1)
+  - RxTheme (~> 6.0)
+  - SnapKit (= 5.7.1)
+  - SwiftDate (~> 7.0)
+  - SwifterSwift (~> 5.0)
+  - Then (= 3.0.0)
+  - Toast-Swift (~> 5.1.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CocoaLumberjack
+    - DateToolsSwift
+    - DeviceKit
+    - Differentiator
+    - DZNEmptyDataSet
+    - FSPagerView
+    - Hero
+    - IQKeyboardManagerSwift
+    - KafkaRefresh
+    - Kingfisher
+    - MonkeyKing
+    - Moya
+    - MoyaSugar
+    - "NSObject+Rx"
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - RxAlertController
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - RxTheme
+    - SnapKit
+    - SwiftDate
+    - SwifterSwift
+    - Then
+    - Toast-Swift
+
+EXTERNAL SOURCES:
+  Moya-ObjectMapper:
+    :branch: master
+    :git: https://github.com/p-rob/Moya-ObjectMapper.git
+
+CHECKOUT OPTIONS:
+  Moya-ObjectMapper:
+    :commit: 4e4ba94bc8af9303471e637ba88a4768563642c9
+    :git: https://github.com/p-rob/Moya-ObjectMapper.git
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
+  DeviceKit: 9f2e0b68984a384f864b0f4e40a54bae43636bd8
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  Hero: 473a0143017e1371d050fcbedb67d317925097f2
+  IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
+  KafkaRefresh: ee64c70eb7c9426a99e68ffdae59dba9bd0b5d51
+  Kingfisher: ff0d31a1f07bdff6a1ebb3ba08b8e6e567b6500c
+  MonkeyKing: 196838a3b4c97e95915f3e7046fb2d6044f06101
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Moya-ObjectMapper: fc1180eb07f527d70bba472f759cc7ccd3eadf24
+  MoyaSugar: 63390c557e038c087dc4bcc8a9f9fda69647ce43
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  NVActivityIndicatorView: fe52a6a68664c2df8991d7d9e3d86d8d19453c53
+  ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
+  RxAlertController: d47c016a597ce9f461044f307c34959b07c9e9ce
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxSwiftExt: 43aaacb6a4d3c69c55e9d1cf4f79920043d13583
+  RxTheme: be60cb14e0544b3cbd574cc37fed35ba9d61aa1f
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SwiftDate: bbc26e26fc8c0c33fbee8c140c5e8a68293a148a
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
+
+PODFILE CHECKSUM: 36223291659a13f0578c30d1d890bb25cafa8550
+
+COCOAPODS: 1.16.2
